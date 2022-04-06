@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screenOnActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/grid"
+    android:keepScreenOn="true"
+    android:keyboardNavigationCluster="false"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+</LinearLayout>

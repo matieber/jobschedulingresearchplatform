@@ -1,0 +1,25 @@
+{
+"benchmarkDefinitions" : [
+	{
+		"benchmarkId" : "trace_gpu",
+		"benchmarkClass" : "gpuBenchmark.GPUBenchmark",
+		"variants" : [
+			{ 
+			  "variantId" : "gpu_discharging_screenOn",
+			  "paramsSamplingStage" : { "names": [], "values": []}, 
+			  "paramsRunStage" : {"screenState": "on", "names": ["threads"], "values": ["1"]},
+			  "energyPreconditionRunStage" : {"requiredBatteryState" : "discharging", "startBatteryLevel" : @@level_start_one@@, "endBatteryLevel" : @@level_end_one@@}
+			}
+		]
+	}
+ 
+  ],
+
+"devices" : [
+	{
+		"deviceModel": "@@model1@@",
+		"variants": [ "gpu_discharging_screenOn" ]
+	}
+  ]
+
+}

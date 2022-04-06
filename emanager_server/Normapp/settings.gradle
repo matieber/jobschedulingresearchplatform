@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        mavenCentral()
+        maven { url "https://chaquo.com/maven" }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        gradlePluginPortal()
+        google()
+    }
+}
+
+include ':app'
+rootProject.name='Normapp'

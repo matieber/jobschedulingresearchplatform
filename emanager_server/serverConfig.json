@@ -1,0 +1,32 @@
+{
+  "server": {
+    "httpPort": 1080,
+    "profilesFolder": "./profiles",
+    "deleteProfilesOnInit": true,
+    "apkFolder": "./Normapp/app/build/outputs/apk/debug"
+  },
+  "benchmark": {
+    "energyHardwareDefinitions": {
+      "NullSwitchManager" : {
+        "maxSupportedDevices" : 1
+      },
+      "MockSwitchManager" : {
+        "maxSupportedDevices" : 1
+      },
+      "ArduinoSwitchManager": {
+        "maxSupportedDevices" : 4
+      },
+      "ESP8266SwitchManager": {
+        "maxSupportedDevices" : 2,
+        "params":{
+            "wifi_SSID": "net",
+            "wifi_PASS": "pass"
+        }
+      }
+    },
+    "scheduler": "FCFS",
+    "energyHardware" : "MockSwitchManager",
+    "appLaunchMode" : "automatic",
+    "benchmarkConfigFile" : "benchmarkConfig.json"
+  }
+}

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="4dp"
+    android:background="#f2f2f2"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="24dp"
+    android:keepScreenOn="true"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:keepScreenOn="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="State: "
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/stateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="-------"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_gravity="end"
+        android:layout_weight="1"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/logTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </ScrollView>
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+
+    <LinearLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="http://"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/ipTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IP"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/portTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PORT"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/device/"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/modelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="MODEL"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+    |
+
+    <EditText
+        android:id="@+id/IpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="192.168.0." />
+
+    <EditText
+        android:id="@+id/portText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="1080" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start!" />
+
+        <Button
+            android:id="@+id/endButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/returnToScreenOnPane"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Screen On"
+        android:visibility="invisible" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

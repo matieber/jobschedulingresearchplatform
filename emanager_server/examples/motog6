@@ -1,0 +1,1155 @@
+--------- beginning of system
+--------- beginning of main
+02-25 10:26:10.595  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:26:10.596  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.48, lastReportedBattLevel=0.48 battState=Discharging plugged=false
+02-25 10:26:20.408  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:26:20 GMT-03:00 2022] /sdcard/Download/run-cycling_1_to_30.txt finished!
+02-25 10:26:20.474  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:26:20.509  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_181_to_210.json, variants: [Variant{variantId='cycling_181_to_210', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:26:20.530  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_181_to_210, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.48, currBattState=discharging
+02-25 10:26:20.533  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:26:47.885  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:26:47 GMT-03:00 2022] /sdcard/Download/run-cycling_181_to_210.txt finished!
+02-25 10:26:47.941  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:26:47.975  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_361_to_390.json, variants: [Variant{variantId='cycling_361_to_390', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:26:47.998  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_361_to_390, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.48, currBattState=discharging
+02-25 10:26:48.002  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:27:10.774  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:27:10.775  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.47, lastReportedBattLevel=0.47 battState=Discharging plugged=false
+02-25 10:27:15.279  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:27:15 GMT-03:00 2022] /sdcard/Download/run-cycling_361_to_390.txt finished!
+02-25 10:27:15.359  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:27:15.390  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_481_to_510.json, variants: [Variant{variantId='cycling_481_to_510', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:27:15.406  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_481_to_510, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:27:15.409  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:27:42.580  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:27:42 GMT-03:00 2022] /sdcard/Download/run-cycling_481_to_510.txt finished!
+02-25 10:27:42.632  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:27:42.650  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_661_to_690.json, variants: [Variant{variantId='cycling_661_to_690', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:27:42.665  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_661_to_690, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:27:42.666  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:28:09.866  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:28:09 GMT-03:00 2022] /sdcard/Download/run-cycling_661_to_690.txt finished!
+02-25 10:28:09.926  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:28:09.955  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_841_to_870.json, variants: [Variant{variantId='cycling_841_to_870', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:28:09.973  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_841_to_870, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:28:09.976  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:28:10.912  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:28:37.344  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:28:37 GMT-03:00 2022] /sdcard/Download/run-cycling_841_to_870.txt finished!
+02-25 10:28:37.405  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:28:37.427  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_1021_to_1050.json, variants: [Variant{variantId='cycling_1021_to_1050', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:28:37.438  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_1021_to_1050, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:28:37.440  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:29:04.689  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:29:04 GMT-03:00 2022] /sdcard/Download/run-cycling_1021_to_1050.txt finished!
+02-25 10:29:04.743  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:29:04.769  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_1141_to_1170.json, variants: [Variant{variantId='cycling_1141_to_1170', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:29:04.784  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_1141_to_1170, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:29:04.786  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:29:11.068  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:29:11.069  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.47, lastReportedBattLevel=0.47 battState=Discharging plugged=false
+02-25 10:29:31.952  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:29:31 GMT-03:00 2022] /sdcard/Download/run-cycling_1141_to_1170.txt finished!
+02-25 10:29:32.003  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:29:32.030  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_1291_to_1320.json, variants: [Variant{variantId='cycling_1291_to_1320', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:29:32.051  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_1291_to_1320, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:29:32.054  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:29:59.384  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:29:59 GMT-03:00 2022] /sdcard/Download/run-cycling_1291_to_1320.txt finished!
+02-25 10:29:59.433  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:29:59.455  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_1471_to_1500.json, variants: [Variant{variantId='cycling_1471_to_1500', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:29:59.469  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_1471_to_1500, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:29:59.471  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:30:11.233  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:30:11.234  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.47, lastReportedBattLevel=0.47 battState=Discharging plugged=false
+02-25 10:30:26.773  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:30:26 GMT-03:00 2022] /sdcard/Download/run-cycling_1471_to_1500.txt finished!
+02-25 10:30:26.811  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:30:26.830  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_1591_to_1620.json, variants: [Variant{variantId='cycling_1591_to_1620', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:30:26.844  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_1591_to_1620, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:30:26.846  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:30:53.964  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:30:53 GMT-03:00 2022] /sdcard/Download/run-cycling_1591_to_1620.txt finished!
+02-25 10:30:54.015  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:30:54.039  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_1771_to_1800.json, variants: [Variant{variantId='cycling_1771_to_1800', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:30:54.054  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_1771_to_1800, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:30:54.055  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:31:09.172  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:31:09.173  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.47, lastReportedBattLevel=0.47 battState=Discharging plugged=false
+02-25 10:31:11.391  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:31:21.381  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:31:21 GMT-03:00 2022] /sdcard/Download/run-cycling_1771_to_1800.txt finished!
+02-25 10:31:21.432  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:31:21.460  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_1951_to_1980.json, variants: [Variant{variantId='cycling_1951_to_1980', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:31:21.484  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_1951_to_1980, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:31:21.487  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:31:48.721  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:31:48 GMT-03:00 2022] /sdcard/Download/run-cycling_1951_to_1980.txt finished!
+02-25 10:31:48.773  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:31:48.794  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_2071_to_2100.json, variants: [Variant{variantId='cycling_2071_to_2100', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:31:48.810  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_2071_to_2100, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:31:48.812  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:32:11.549  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:32:11.551  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.47, lastReportedBattLevel=0.47 battState=Discharging plugged=false
+02-25 10:32:16.522  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:32:16 GMT-03:00 2022] /sdcard/Download/run-cycling_2071_to_2100.txt finished!
+02-25 10:32:16.589  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:32:16.611  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_2221_to_2250.json, variants: [Variant{variantId='cycling_2221_to_2250', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:32:16.632  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_2221_to_2250, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:32:16.634  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:32:43.776  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:32:43 GMT-03:00 2022] /sdcard/Download/run-cycling_2221_to_2250.txt finished!
+02-25 10:32:43.814  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:32:43.836  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_2401_to_2430.json, variants: [Variant{variantId='cycling_2401_to_2430', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:32:43.853  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_2401_to_2430, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:32:43.855  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:33:11.182  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:33:11 GMT-03:00 2022] /sdcard/Download/run-cycling_2401_to_2430.txt finished!
+02-25 10:33:11.231  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:33:11.252  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_2581_to_2610.json, variants: [Variant{variantId='cycling_2581_to_2610', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:33:11.274  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_2581_to_2610, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:33:11.276  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:33:11.709  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:33:38.817  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:33:38 GMT-03:00 2022] /sdcard/Download/run-cycling_2581_to_2610.txt finished!
+02-25 10:33:38.873  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:33:38.893  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_2731_to_2760.json, variants: [Variant{variantId='cycling_2731_to_2760', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:33:38.923  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_2731_to_2760, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:33:38.926  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:34:06.173  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:34:06 GMT-03:00 2022] /sdcard/Download/run-cycling_2731_to_2760.txt finished!
+02-25 10:34:06.226  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:34:06.248  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_2851_to_2880.json, variants: [Variant{variantId='cycling_2851_to_2880', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:34:06.271  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_2851_to_2880, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.47, currBattState=discharging
+02-25 10:34:06.274  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:34:11.870  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:34:11.871  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.46, lastReportedBattLevel=0.46 battState=Discharging plugged=false
+02-25 10:34:33.442  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:34:33 GMT-03:00 2022] /sdcard/Download/run-cycling_2851_to_2880.txt finished!
+02-25 10:34:33.480  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:34:33.501  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_3031_to_3060.json, variants: [Variant{variantId='cycling_3031_to_3060', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:34:33.519  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_3031_to_3060, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:34:33.521  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:35:01.044  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:35:01 GMT-03:00 2022] /sdcard/Download/run-cycling_3031_to_3060.txt finished!
+02-25 10:35:01.099  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:35:01.120  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_3211_to_3240.json, variants: [Variant{variantId='cycling_3211_to_3240', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:35:01.139  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_3211_to_3240, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:35:01.141  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:35:12.032  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:35:12.033  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.46, lastReportedBattLevel=0.46 battState=Discharging plugged=false
+02-25 10:35:28.075  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:35:28.076  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.46, lastReportedBattLevel=0.46 battState=Discharging plugged=false
+02-25 10:35:28.558  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:35:28 GMT-03:00 2022] /sdcard/Download/run-cycling_3211_to_3240.txt finished!
+02-25 10:35:28.614  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:35:28.637  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_3361_to_3390.json, variants: [Variant{variantId='cycling_3361_to_3390', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:35:28.657  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_3361_to_3390, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:35:28.658  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:35:55.948  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:35:55 GMT-03:00 2022] /sdcard/Download/run-cycling_3361_to_3390.txt finished!
+02-25 10:35:56.001  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:35:56.037  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_3511_to_3540.json, variants: [Variant{variantId='cycling_3511_to_3540', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:35:56.066  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_3511_to_3540, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:35:56.068  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:36:12.205  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:36:12.206  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.46, lastReportedBattLevel=0.46 battState=Discharging plugged=false
+02-25 10:36:23.555  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:36:23 GMT-03:00 2022] /sdcard/Download/run-cycling_3511_to_3540.txt finished!
+02-25 10:36:23.605  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:36:23.636  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_3661_to_3690.json, variants: [Variant{variantId='cycling_3661_to_3690', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:36:23.662  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_3661_to_3690, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:36:23.664  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:36:51.163  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:36:51 GMT-03:00 2022] /sdcard/Download/run-cycling_3661_to_3690.txt finished!
+02-25 10:36:51.207  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:36:51.231  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_3811_to_3840.json, variants: [Variant{variantId='cycling_3811_to_3840', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:36:51.253  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_3811_to_3840, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:36:51.254  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:37:12.346  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:37:12.347  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.46, lastReportedBattLevel=0.46 battState=Discharging plugged=false
+02-25 10:37:18.492  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:37:18 GMT-03:00 2022] /sdcard/Download/run-cycling_3811_to_3840.txt finished!
+02-25 10:37:18.538  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:37:18.562  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_3961_to_3990.json, variants: [Variant{variantId='cycling_3961_to_3990', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:37:18.584  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_3961_to_3990, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:37:18.587  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:37:45.952  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:37:45 GMT-03:00 2022] /sdcard/Download/run-cycling_3961_to_3990.txt finished!
+02-25 10:37:46.002  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:37:46.027  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_4141_to_4170.json, variants: [Variant{variantId='cycling_4141_to_4170', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:37:46.052  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_4141_to_4170, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:37:46.054  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:38:12.505  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:38:12.507  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.46, lastReportedBattLevel=0.46 battState=Discharging plugged=false
+02-25 10:38:13.237  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:38:13 GMT-03:00 2022] /sdcard/Download/run-cycling_4141_to_4170.txt finished!
+02-25 10:38:13.282  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:38:13.309  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_4291_to_4320.json, variants: [Variant{variantId='cycling_4291_to_4320', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:38:13.334  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_4291_to_4320, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:38:13.336  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:38:22.656  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:38:22.657  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.46, lastReportedBattLevel=0.46 battState=Discharging plugged=false
+02-25 10:38:41.131  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:38:41 GMT-03:00 2022] /sdcard/Download/run-cycling_4291_to_4320.txt finished!
+02-25 10:38:41.178  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:38:41.203  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_4471_to_4500.json, variants: [Variant{variantId='cycling_4471_to_4500', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:38:41.228  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_4471_to_4500, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:38:41.230  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:39:08.615  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:39:08 GMT-03:00 2022] /sdcard/Download/run-cycling_4471_to_4500.txt finished!
+02-25 10:39:08.663  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:39:08.690  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_4591_to_4620.json, variants: [Variant{variantId='cycling_4591_to_4620', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:39:08.717  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_4591_to_4620, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:39:08.718  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:39:12.668  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:39:36.017  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:39:36 GMT-03:00 2022] /sdcard/Download/run-cycling_4591_to_4620.txt finished!
+02-25 10:39:36.074  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:39:36.108  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_4771_to_4800.json, variants: [Variant{variantId='cycling_4771_to_4800', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:39:36.138  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_4771_to_4800, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:39:36.140  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:40:03.691  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:40:03 GMT-03:00 2022] /sdcard/Download/run-cycling_4771_to_4800.txt finished!
+02-25 10:40:03.742  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:40:03.769  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_4921_to_4950.json, variants: [Variant{variantId='cycling_4921_to_4950', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:40:03.797  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_4921_to_4950, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:40:03.799  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:40:12.830  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:40:12.831  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.46, lastReportedBattLevel=0.46 battState=Discharging plugged=false
+02-25 10:40:31.393  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:40:31 GMT-03:00 2022] /sdcard/Download/run-cycling_4921_to_4950.txt finished!
+02-25 10:40:31.443  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:40:31.473  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_5101_to_5130.json, variants: [Variant{variantId='cycling_5101_to_5130', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:40:31.500  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_5101_to_5130, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:40:31.501  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:40:58.704  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:40:58 GMT-03:00 2022] /sdcard/Download/run-cycling_5101_to_5130.txt finished!
+02-25 10:40:58.753  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:40:58.783  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_5251_to_5280.json, variants: [Variant{variantId='cycling_5251_to_5280', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:40:58.812  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_5251_to_5280, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.46, currBattState=discharging
+02-25 10:40:58.814  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:41:09.190  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:41:09.191  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 10:41:12.986  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:41:26.166  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:41:26 GMT-03:00 2022] /sdcard/Download/run-cycling_5251_to_5280.txt finished!
+02-25 10:41:26.258  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:41:26.336  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_5371_to_5400.json, variants: [Variant{variantId='cycling_5371_to_5400', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:41:26.371  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_5371_to_5400, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.45, currBattState=discharging
+02-25 10:41:26.373  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:41:53.874  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:41:53 GMT-03:00 2022] /sdcard/Download/run-cycling_5371_to_5400.txt finished!
+02-25 10:41:53.923  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:41:53.953  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_5551_to_5580.json, variants: [Variant{variantId='cycling_5551_to_5580', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:41:53.983  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_5551_to_5580, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.45, currBattState=discharging
+02-25 10:41:53.985  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:42:13.148  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:42:13.148  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 10:42:21.049  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:42:21 GMT-03:00 2022] /sdcard/Download/run-cycling_5551_to_5580.txt finished!
+02-25 10:42:21.097  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:42:21.127  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_5731_to_5760.json, variants: [Variant{variantId='cycling_5731_to_5760', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:42:21.156  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_5731_to_5760, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.45, currBattState=discharging
+02-25 10:42:21.158  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:42:48.368  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:42:48 GMT-03:00 2022] /sdcard/Download/run-cycling_5731_to_5760.txt finished!
+02-25 10:42:48.416  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:42:48.448  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_5881_to_5910.json, variants: [Variant{variantId='cycling_5881_to_5910', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:42:48.478  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_5881_to_5910, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.45, currBattState=discharging
+02-25 10:42:48.479  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:43:13.312  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:43:13.313  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 10:43:15.564  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:43:15 GMT-03:00 2022] /sdcard/Download/run-cycling_5881_to_5910.txt finished!
+02-25 10:43:15.609  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:43:15.641  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_6031_to_6060.json, variants: [Variant{variantId='cycling_6031_to_6060', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:43:15.674  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_6031_to_6060, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.45, currBattState=discharging
+02-25 10:43:15.676  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:43:42.919  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:43:42 GMT-03:00 2022] /sdcard/Download/run-cycling_6031_to_6060.txt finished!
+02-25 10:43:42.971  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:43:43.003  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_6181_to_6210.json, variants: [Variant{variantId='cycling_6181_to_6210', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:43:43.034  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_6181_to_6210, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.45, currBattState=discharging
+02-25 10:43:43.035  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:44:10.098  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:44:10 GMT-03:00 2022] /sdcard/Download/run-cycling_6181_to_6210.txt finished!
+02-25 10:44:10.166  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:44:10.209  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_6361_to_6390.json, variants: [Variant{variantId='cycling_6361_to_6390', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:44:10.240  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_6361_to_6390, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.45, currBattState=discharging
+02-25 10:44:10.242  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:44:13.467  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:44:27.944  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:44:27.945  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.44, lastReportedBattLevel=0.44 battState=Discharging plugged=false
+02-25 10:44:37.257  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:44:37 GMT-03:00 2022] /sdcard/Download/run-cycling_6361_to_6390.txt finished!
+02-25 10:44:37.303  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:44:37.337  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_6481_to_6510.json, variants: [Variant{variantId='cycling_6481_to_6510', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:44:37.369  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_6481_to_6510, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:44:37.370  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:45:04.721  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:45:04 GMT-03:00 2022] /sdcard/Download/run-cycling_6481_to_6510.txt finished!
+02-25 10:45:04.777  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:45:04.814  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_6661_to_6690.json, variants: [Variant{variantId='cycling_6661_to_6690', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:45:04.847  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_6661_to_6690, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:45:04.849  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:45:13.627  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:45:13.627  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.44, lastReportedBattLevel=0.44 battState=Discharging plugged=false
+02-25 10:45:32.314  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:45:32 GMT-03:00 2022] /sdcard/Download/run-cycling_6661_to_6690.txt finished!
+02-25 10:45:32.363  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:45:32.398  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_6841_to_6870.json, variants: [Variant{variantId='cycling_6841_to_6870', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:45:32.432  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_6841_to_6870, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:45:32.433  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:45:59.626  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:45:59 GMT-03:00 2022] /sdcard/Download/run-cycling_6841_to_6870.txt finished!
+02-25 10:45:59.675  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:45:59.713  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_6961_to_6990.json, variants: [Variant{variantId='cycling_6961_to_6990', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:45:59.747  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_6961_to_6990, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:45:59.749  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:46:13.788  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:46:13.788  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.44, lastReportedBattLevel=0.44 battState=Discharging plugged=false
+02-25 10:46:27.303  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:46:27 GMT-03:00 2022] /sdcard/Download/run-cycling_6961_to_6990.txt finished!
+02-25 10:46:27.352  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:46:27.390  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_7111_to_7140.json, variants: [Variant{variantId='cycling_7111_to_7140', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:46:27.427  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_7111_to_7140, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:46:27.428  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:46:54.644  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:46:54 GMT-03:00 2022] /sdcard/Download/run-cycling_7111_to_7140.txt finished!
+02-25 10:46:54.694  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:46:54.731  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_7291_to_7320.json, variants: [Variant{variantId='cycling_7291_to_7320', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:46:54.766  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_7291_to_7320, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:46:54.768  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:47:13.947  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:47:13.947  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.44, lastReportedBattLevel=0.44 battState=Discharging plugged=false
+02-25 10:47:22.040  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:47:22 GMT-03:00 2022] /sdcard/Download/run-cycling_7291_to_7320.txt finished!
+02-25 10:47:22.093  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:47:22.133  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_7441_to_7470.json, variants: [Variant{variantId='cycling_7441_to_7470', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:47:22.168  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_7441_to_7470, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:47:22.170  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:47:49.538  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:47:49 GMT-03:00 2022] /sdcard/Download/run-cycling_7441_to_7470.txt finished!
+02-25 10:47:49.581  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:47:49.624  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_7591_to_7620.json, variants: [Variant{variantId='cycling_7591_to_7620', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:47:49.661  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_7591_to_7620, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:47:49.662  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:48:14.107  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:48:14.108  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.44, lastReportedBattLevel=0.44 battState=Discharging plugged=false
+02-25 10:48:16.868  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:48:16 GMT-03:00 2022] /sdcard/Download/run-cycling_7591_to_7620.txt finished!
+02-25 10:48:16.915  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:48:16.953  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_7741_to_7770.json, variants: [Variant{variantId='cycling_7741_to_7770', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:48:16.990  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_7741_to_7770, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:48:16.991  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:48:44.114  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:48:44 GMT-03:00 2022] /sdcard/Download/run-cycling_7741_to_7770.txt finished!
+02-25 10:48:44.169  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:48:44.213  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_7891_to_7920.json, variants: [Variant{variantId='cycling_7891_to_7920', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:48:44.250  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_7891_to_7920, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:48:44.252  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:49:11.327  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:49:11 GMT-03:00 2022] /sdcard/Download/run-cycling_7891_to_7920.txt finished!
+02-25 10:49:11.387  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:49:11.432  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_8071_to_8100.json, variants: [Variant{variantId='cycling_8071_to_8100', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:49:11.474  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_8071_to_8100, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:49:11.475  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:49:14.267  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:49:38.625  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:49:38 GMT-03:00 2022] /sdcard/Download/run-cycling_8071_to_8100.txt finished!
+02-25 10:49:38.667  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:49:38.716  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_8221_to_8250.json, variants: [Variant{variantId='cycling_8221_to_8250', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:49:38.755  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_8221_to_8250, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:49:38.756  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:50:05.961  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:50:05 GMT-03:00 2022] /sdcard/Download/run-cycling_8221_to_8250.txt finished!
+02-25 10:50:06.019  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:50:06.059  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_8341_to_8370.json, variants: [Variant{variantId='cycling_8341_to_8370', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:50:06.099  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_8341_to_8370, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:50:06.100  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:50:14.445  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:50:14.447  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.44, lastReportedBattLevel=0.44 battState=Discharging plugged=false
+02-25 10:50:33.685  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:50:33 GMT-03:00 2022] /sdcard/Download/run-cycling_8341_to_8370.txt finished!
+02-25 10:50:33.725  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:50:33.777  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_8521_to_8550.json, variants: [Variant{variantId='cycling_8521_to_8550', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:50:33.816  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_8521_to_8550, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:50:33.818  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:51:00.958  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:51:00 GMT-03:00 2022] /sdcard/Download/run-cycling_8521_to_8550.txt finished!
+02-25 10:51:01.013  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:51:01.054  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_8701_to_8730.json, variants: [Variant{variantId='cycling_8701_to_8730', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:51:01.094  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_8701_to_8730, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.44, currBattState=discharging
+02-25 10:51:01.096  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:51:06.262  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 10:51:06.263  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:51:14.586  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:51:14.586  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:51:28.537  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:51:28 GMT-03:00 2022] /sdcard/Download/run-cycling_8701_to_8730.txt finished!
+02-25 10:51:28.583  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:51:28.633  8792  8792 D BenchmarkExecutor: jobId: cs406_pullbased_goodBatt2Fast_cycling_cycling_8821_to_8850.json, variants: [Variant{variantId='cycling_8821_to_8850', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=-1.0}}]
+02-25 10:51:28.675  8792  8792 D BenchmarkExecutor: Starting variantId=cycling_8821_to_8850, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=-1.0, currBattLevel=0.43, currBattState=discharging
+02-25 10:51:28.677  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:51:56.287  8792  8792 D BenchmarkExecutor: [Fri Feb 25 10:51:56 GMT-03:00 2022] /sdcard/Download/run-cycling_8821_to_8850.txt finished!
+02-25 10:51:56.337  8792  8880 D BenchmarkExecutor: Benchmark result successfully received by the server
+02-25 10:52:15.544  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:52:15.545  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:52:36.580  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:53:15.774  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:53:15.775  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:53:16.900  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:53:57.139  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:54:15.939  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:54:15.940  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:54:37.428  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:55:16.110  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:55:16.111  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:55:17.647  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:55:57.904  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:56:16.282  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:56:16.283  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:56:38.173  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:57:16.431  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:57:16.432  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:57:18.412  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:57:58.678  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:58:16.584  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:58:16.585  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:58:38.916  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:59:16.720  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 10:59:16.721  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 10:59:19.133  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 10:59:59.362  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:00:16.900  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:00:16.902  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:00:39.607  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:01:09.182  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:01:09.184  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:01:17.056  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:01:17.057  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:01:19.834  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:02:00.055  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:02:17.214  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:02:17.215  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:02:40.330  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:03:18.651  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:03:18.651  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:03:20.595  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:04:00.818  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:04:18.816  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:04:18.818  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:04:41.038  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:05:18.974  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:05:18.975  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:05:21.310  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:06:01.566  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:06:20.411  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:06:20.412  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:06:41.801  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:07:20.572  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:07:20.573  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:07:22.065  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:08:02.311  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:08:20.740  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:08:20.742  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:08:42.555  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:09:22.143  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:09:22.145  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:09:22.801  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:10:03.019  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:10:22.338  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:10:22.340  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:10:43.255  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:11:09.182  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:11:09.184  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:11:23.479  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:11:23.778  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:11:23.779  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:12:03.690  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:12:23.934  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:12:23.936  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:12:43.929  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:13:24.156  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:13:25.397  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:13:25.398  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:14:04.361  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:14:25.539  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:14:25.540  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:14:44.587  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:15:24.837  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:15:27.010  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:15:27.011  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:16:05.074  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:16:27.140  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:16:27.142  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:16:45.480  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:17:25.763  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:17:28.587  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:17:28.589  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:18:05.989  8792  8792 D BenchmarkExecutor: Retrying benchmarks retrieval
+02-25 11:18:26.141  8792  8792 D BenchmarkExecutor: jobId: fast_charging_job, variants: [Variant{variantId='cpu0_charging_screenOff', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='charging_ac', minStartBatteryLevel=-1.0, minEndBatteryLevel=0.48}}]
+02-25 11:18:26.207  8792  8792 D BenchmarkExecutor: Signal sent to motrol to put slot id in charging_ac
+02-25 11:18:26.309  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:18:26.310  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.43, lastReportedBattLevel=0.43 battState=Discharging plugged=false
+02-25 11:18:26.399  8792  8792 D BenchmarkExecutor: Energy switched successfully to: charging_ac
+02-25 11:18:26.499  8792  8792 D BenchmarkExecutor: Signal sent to motrol to put slot id in charging_ac
+02-25 11:18:26.502  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:18:26.691  8792  8792 D BenchmarkExecutor: Energy switched successfully to: charging_ac
+02-25 11:18:26.775  8792  8792 D BenchmarkExecutor: Signal sent to motrol to put slot id in charging_ac
+02-25 11:18:26.974  8792  8792 D BenchmarkExecutor: Energy switched successfully to: charging_ac
+02-25 11:18:27.056  8792  8792 D BenchmarkExecutor: Signal sent to motrol to put slot id in charging_ac
+02-25 11:18:27.231  8792  8792 D BenchmarkExecutor: Energy switched successfully to: charging_ac
+02-25 11:18:27.296  8792  8792 D BenchmarkExecutor: Signal sent to motrol to put slot id in charging_ac
+02-25 11:18:27.489  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:18:27.527  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 11:18:27.529  8792  8792 D BenchmarkExecutor: Energy switched successfully to: charging_ac
+02-25 11:18:27.595  8792  8792 D BenchmarkExecutor: Starting variantId=cpu0_charging_screenOff, reqBattState=charging_ac, reqStartBattLevel=-1.0, reqEndBattLevel=0.48, currBattLevel=0.43, currBattState=charging
+02-25 11:18:27.596  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 11:18:27.837  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:18:30.252  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_on
+02-25 11:18:30.312  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:18:30.321  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:18:30.444  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_off
+02-25 11:18:46.538  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:18:46.539  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.44, lastReportedBattLevel=0.44 battState=Charging plugged=true
+02-25 11:19:27.440  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:19:27.442  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.44, lastReportedBattLevel=0.44 battState=Charging plugged=true
+02-25 11:19:30.697  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:19:31.720  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:19:31.722  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:20:00.558  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:20:00.559  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:20:27.438  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:20:27.440  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:20:31.834  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:20:47.990  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:20:47.991  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:21:27.441  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:21:27.443  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:21:31.993  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:21:35.454  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:21:35.456  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:22:21.460  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:22:21.461  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:22:32.150  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:22:32.151  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:23:08.971  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:23:08.973  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:23:27.445  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:23:27.446  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:23:32.311  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:23:56.499  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:23:56.500  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:24:27.441  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:24:27.442  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:24:32.458  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:24:32.459  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:24:42.572  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:24:42.573  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:25:27.444  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:25:27.446  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:25:30.140  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:25:32.640  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:25:32.641  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:25:43.392  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:25:43.396  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:25:44.398  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:25:53.296  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:25:53.297  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:25:54.303  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:25:56.311  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:03.296  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:03.298  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:05.297  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:06.316  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:07.323  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:08.324  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:08.325  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:09.330  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:10.334  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:12.343  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:17.719  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:17.726  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:23.307  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:23.308  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:24.313  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:25.320  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:27.330  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:28.332  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:28.333  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:30.341  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:31.348  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:33.382  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:33.382  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:34.365  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:36.373  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:37.379  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:38.385  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:38.387  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:39.391  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:40.394  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:42.402  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:43.406  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:43.407  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:45.410  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:46.401  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:48.428  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:48.429  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:49.432  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:50.444  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:52.449  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:53.459  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:53.461  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:55.466  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:56.472  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:58.483  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:26:58.485  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:26:59.485  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:01.492  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:02.495  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:04.510  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:04.512  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:05.513  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:07.522  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:08.524  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:10.531  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:10.533  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:11.535  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:13.542  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:14.533  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:16.557  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:16.559  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:17.556  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:19.566  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:20.571  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:22.575  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:22.576  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:23.578  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:25.588  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:26.590  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:27.604  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:27.610  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:28.585  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:29.607  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:30.610  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:32.622  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:32.630  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:33.623  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:35.636  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:36.634  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:38.653  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:38.661  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:39.655  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:41.663  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:42.652  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:44.674  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:44.676  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:45.680  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:47.689  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:48.693  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:50.704  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:50.705  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:51.710  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:53.720  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:54.723  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:56.716  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:56.717  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:27:57.733  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:58.739  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:27:59.744  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:00.751  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:02.760  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:02.762  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:03.765  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:04.784  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:06.780  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:07.787  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:07.788  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:09.796  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:10.785  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:12.813  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:12.816  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:13.814  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:15.822  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:16.829  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:18.836  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:18.838  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:19.843  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:21.853  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:22.857  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:24.850  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:24.851  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:25.858  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:27.877  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:28.880  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:30.893  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:30.894  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:31.898  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:33.909  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:34.917  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:36.929  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:36.930  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:37.926  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:38.914  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:39.932  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:40.936  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:42.947  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:42.949  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:43.955  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:44.959  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:46.972  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:47.976  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:47.977  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:48.982  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:49.987  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:50.988  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:52.981  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:52.982  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:28:53.998  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:56.006  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:57.017  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:59.023  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:28:59.027  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:00.028  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:02.035  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:03.041  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:05.049  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:05.050  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:06.052  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:08.059  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:09.066  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:11.073  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:11.075  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:12.083  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:14.085  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:15.090  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:17.103  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:17.105  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:18.104  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:19.108  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:20.095  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:21.107  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:22.116  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:22.117  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:24.123  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:25.130  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:27.142  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:27.143  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:28.444  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:29.144  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:30.450  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:31.150  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:33.161  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:33.162  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:34.152  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:36.175  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:37.180  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:39.188  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:39.189  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:40.195  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:42.496  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:43.211  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:45.215  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:45.216  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:46.224  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:48.219  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:49.233  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:51.243  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:51.244  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:52.250  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:54.261  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:55.262  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:57.271  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:57.272  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:29:58.273  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:29:59.279  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:01.283  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:02.273  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:02.274  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:04.295  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:05.297  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:07.311  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:07.312  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:08.316  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:10.320  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:11.326  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:13.337  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:13.338  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:14.343  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:16.338  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:17.353  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:19.364  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:19.366  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:20.366  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:22.381  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:23.383  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:25.391  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:25.392  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:26.395  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:27.488  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:28.402  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:29.407  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:31.420  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:31.421  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:32.422  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:34.433  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:35.436  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:36.436  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:36.439  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:38.445  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:39.451  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:41.460  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:41.461  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:42.464  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:44.472  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:45.479  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:47.483  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:47.486  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:48.487  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:49.494  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:50.496  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:51.501  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:53.509  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:53.510  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:30:54.516  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:56.528  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:57.532  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:59.536  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:30:59.536  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:00.538  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:02.547  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:03.552  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:05.561  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:05.562  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:06.566  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:08.573  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:09.580  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:11.590  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:11.592  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:12.580  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:13.598  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:15.601  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:16.618  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:16.620  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:18.619  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:19.621  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:20.985  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:21.630  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:21.631  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:22.640  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:24.645  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:25.649  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:27.664  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:27.665  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:28.664  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:29.670  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:30.672  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:31.678  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:33.682  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:33.683  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:34.687  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:36.697  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:37.701  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:39.702  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:39.703  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:40.712  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:42.719  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:43.725  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:45.731  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:45.733  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:46.738  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:47.762  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:49.750  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:50.756  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:50.757  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:52.768  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:53.755  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:55.774  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:55.775  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:31:56.782  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:58.792  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:31:59.794  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:01.801  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:01.804  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:02.808  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:04.816  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:05.825  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:07.824  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:07.826  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:08.820  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:09.835  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:10.843  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:11.844  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:13.854  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:13.855  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:14.858  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:16.868  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:17.870  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:19.880  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:19.881  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:20.884  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:22.891  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:23.896  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:24.901  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:24.902  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:26.909  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:27.914  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:29.926  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:29.929  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:30.927  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:32.938  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:33.940  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:35.944  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:35.946  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:36.942  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:38.963  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:39.961  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:41.971  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:41.972  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:42.977  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:44.985  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:45.991  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:48.002  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:48.004  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:49.006  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:50.998  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:52.017  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:54.024  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:54.026  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:32:55.033  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:57.046  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:32:58.047  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:00.060  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:00.061  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:01.062  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:02.061  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:04.070  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:05.077  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:05.077  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:07.085  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:08.123  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:09.439  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:10.102  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:10.103  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:11.106  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:13.116  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:14.122  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:16.129  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:16.131  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:17.134  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:19.139  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:20.143  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:22.152  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:22.153  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:23.158  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:25.169  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:26.174  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:27.437  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:27.439  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:28.180  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:29.181  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:31.190  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:32.179  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:34.202  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:34.203  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:35.206  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:36.213  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:38.220  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:39.224  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:39.226  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:40.230  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:41.236  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:42.243  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:44.250  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:44.255  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:45.252  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:47.255  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:48.263  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:50.276  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:50.278  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:51.279  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:53.289  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:54.292  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:56.305  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:56.306  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:33:57.309  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:33:59.318  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:00.322  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:02.338  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:02.346  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:03.338  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:05.346  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:06.351  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:08.363  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:08.364  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:09.367  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:10.387  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:12.379  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:13.384  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:13.385  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:15.379  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:16.404  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:18.407  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:18.408  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:19.412  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:20.417  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:21.419  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:22.426  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:24.435  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:24.436  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:25.440  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:27.437  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:28.450  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:30.458  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:30.459  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:31.467  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:33.476  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:34.480  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:36.493  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:36.495  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:37.493  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:39.503  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:40.508  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:42.523  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:42.524  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:43.510  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:44.537  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:45.542  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:46.544  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:47.547  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:47.548  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:49.560  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:50.569  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:52.575  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:52.578  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:53.582  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:55.591  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:56.594  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:58.609  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:34:58.614  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:34:59.612  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:01.620  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:02.619  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:04.632  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:04.633  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:35:05.637  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:07.647  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:08.653  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:09.657  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:09.658  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:35:10.644  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:11.654  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:13.673  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:14.678  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:14.679  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:35:16.687  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:17.692  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:18.697  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:19.687  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:19.688  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:35:20.707  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:21.711  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:23.721  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:24.711  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:24.711  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:35:26.732  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:27.736  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:29.748  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:29.749  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:35:30.754  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:32.761  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:35:33.769  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:36:01.695  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:36:01.696  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:36:27.439  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:36:27.440  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:36:34.816  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:36:34.817  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:37:05.408  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:37:05.414  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:37:34.978  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:37:34.979  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:37:45.006  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:37:45.009  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:37:55.032  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:37:55.033  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:38:12.036  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:38:12.037  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:38:27.436  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:38:27.437  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:38:55.193  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:38:55.194  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:39:14.246  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:39:14.253  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:39:27.437  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:39:27.439  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:39:55.353  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:39:55.354  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:40:14.972  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:40:14.975  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:40:55.517  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:40:55.518  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:41:17.169  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:41:17.170  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:41:55.689  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:41:55.693  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:42:17.883  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:42:17.884  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:42:55.840  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:42:55.841  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:43:20.072  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:43:20.073  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:43:55.993  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:43:55.995  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:44:20.788  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:44:20.789  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:44:27.438  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:44:27.441  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:44:56.156  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:44:56.156  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:45:22.986  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:45:22.987  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:45:56.311  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:45:56.315  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:46:25.183  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:46:25.184  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:46:56.474  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:46:56.475  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:47:27.385  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:47:27.386  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:47:56.620  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:47:56.621  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:48:27.437  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:48:27.438  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:48:29.589  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:48:56.793  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:48:56.794  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:49:27.438  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:49:27.439  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:49:33.276  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:49:33.277  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:49:56.949  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:49:56.949  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:50:27.436  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:50:27.438  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:50:35.472  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:50:35.475  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:50:57.111  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:50:57.111  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:51:27.428  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:51:27.429  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:51:42.101  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:51:42.102  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:51:57.269  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:51:57.270  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:52:27.439  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:52:27.440  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:52:57.441  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:52:57.442  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:53:27.437  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:53:27.438  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:53:57.579  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:53:57.579  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:54:07.619  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:54:07.620  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:54:17.645  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:54:17.645  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:54:27.437  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:54:27.438  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:55:17.812  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:55:17.813  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:55:51.810  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:55:51.810  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:56:17.968  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:56:17.970  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:56:37.251  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_on
+02-25 11:57:02.925  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 11:57:02.926  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Charging plugged=true
+02-25 11:57:02.981  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 11:57:03.003  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 11:57:03.028  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 11:57:03.066  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 11:57:03.293  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_off
+02-25 11:57:03.390  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_on
+02-25 11:57:03.826  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_off
+02-25 11:57:20.309  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:57:20.309  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 11:57:26.364  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_on
+02-25 11:58:03.125  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 11:58:03.126  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 11:58:04.028  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_off
+02-25 11:59:04.043  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 11:59:04.045  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 11:59:04.602  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 12:00:04.832  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 12:00:04.832  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 12:01:05.073  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 12:01:05.074  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 12:02:05.285  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 12:02:05.286  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 12:03:05.470  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 12:03:05.471  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 12:03:23.689  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: false
+02-25 12:03:23.689  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 12:03:26.512  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_on
+02-25 12:04:05.587  8792  8792 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true
+02-25 12:04:05.588  8792  8792 D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.45, lastReportedBattLevel=0.45 battState=Discharging plugged=false
+02-25 12:04:06.533  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_off
+02-25 12:04:08.140  8792  8792 D BenchmarkExecutor: Screen State changed. Now screen_on
+02-25 12:04:08.601  8792  8792 D BenchmarkExecutor: Destroying service invoked!
+02-25 12:04:08.601  8792  8792 D BenchmarkExecutor: serviceStop(Intent intent) invoked!
+02-25 12:04:08.601  8792  8792 D BenchmarkExecutor: stopBenchmark invoked
+02-25 12:05:20.555  8792  8792 D BenchmarkExecutor: Benchmark Executor Service restartNmb:1
+02-25 12:05:20.555  8792  8792 D BenchmarkExecutor: Benchmark Executor Service initialization aborted. There is another service instance running. restartNmb:1
+--------- beginning of crash
+02-25 12:05:22.269 12408 12408 D BenchmarkExecutor: Benchmark Executor Service restartNmb:0
+02-25 12:05:22.750 12408 12408 D BenchmarkExecutor: jobId: idle_discharging_job, variants: [Variant{variantId='cpu0_discharging_screenOff', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='discharging', minStartBatteryLevel=-1.0, minEndBatteryLevel=0.48}}]
+02-25 12:05:22.753 12408 12408 D BenchmarkExecutor: Starting variantId=cpu0_discharging_screenOff, reqBattState=discharging, reqStartBattLevel=-1.0, reqEndBattLevel=0.48, currBattLevel=0.89, currBattState=discharging
+02-25 12:05:22.757 12408 12408 D BenchmarkExecutor: TurningScreenOff - isDisplayOn: true

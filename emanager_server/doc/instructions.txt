@@ -1,0 +1,15 @@
+Step #1
+-------
+
+Install in the PC Python 3 and pip3.
+
+Also install pyserial, web.py and requests:
+pip3 install pyserial web.py requests matplotlib
+
+The current user must be member of the "dialout" group; from a terminal type: "sudo addgroup [USER] dialout"
+
+Step #2
+-------
+
+Install via the OS package manager the required system packages: jq, adb, net-tools, aapt, python3-tk, curl
+Lastly, just run the server.

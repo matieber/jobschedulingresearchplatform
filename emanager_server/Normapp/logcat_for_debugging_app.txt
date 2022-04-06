@@ -1,0 +1,13 @@
+As any Android app, Android Benchmarks App can be debugged using logcat. The following are common commands used for debugging purposes.
+
+adb logcat ActivityManager:E *:S (Useful to visualize ANR crashes)
+
+adb logcat -b crash
+
+
+Classes that write log entries and can help to identify unexpected behaviors:
+
+adb logcat BenchmarkExecutor:D *:S
+adb logcat BatteryNotificator:D *:S
+adb logcat BatteryStopCondition:D *:S
+

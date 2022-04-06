@@ -1,0 +1,37 @@
+Observed behavior: A device doesn't respond to a battery level reach where it is supposed to start/finish a new benchmark.
+
+Diagnosis:
+- The behavior happends during a preparation phase, while the device charge/discharge to meet a configured battery level
+- Using Logcat in the following way: "adb logcat BenchmarkExecutor:D *:s" reveals information of battery condition met but with no effect on the expected execution workflow. Ej: 
+"
+[Variant{variantId='cpu0_charging_screenOff', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='charging_ac', minStartBatteryLevel=-1.0, minEndBatteryLevel=0.1}}]
+D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.1 battState=Charging plugged=true
+
+"
+
+- CPU monitor is not properly working: measure_cpu.sh is running as per information of "lsof /sdcard/Download/measure_cpu.sh", however, cpu-sample1.txt and cpu-sample2.txt are not present nor constantly updated in /sdcard/Download directory.
+
+Solution: 
+	Make measure_cpu.sh process work properly: For an unknown reason, in some device models, measure_cpu.sh runs but it doesn't flush output to cpu-sample1.txt and cpu-sample2.txt. Issuing a kill on the process solves the problem. It is not necesary to re-run measure_cpu.sh script.
+	Update: the solution is automated with the script "fixed_hanged_cpu_monitor".
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Observed behavior: when running ./launch_emanager_server.sh and using arduinoSwitchManager or ESP8266SwitchManager the following error appears in console:
+
+[Errno 13] could not open port /dev/ttyACM0: [Errno 13] Permission denied: '/dev/ttyACM0'
+
+Quick and dirty solution:
+    sudo chmod 666 /dev/ttyACM0
+    Other possible solutions here: https://stackoverflow.com/questions/27858041/oserror-errno-13-permission-denied-dev-ttyacm0-using-pyserial-from-pyth
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Observed behavior: devices fail to ask emanager server to change the energy switch, i.e., put them to charge or discharge. The console log throws failed PUT requests.
+
+Diagnosis: there is a zombie emanager server instance, perhaps due to an abnormal termination of a previous run. By configuration emanager server utilizes port 1080 to publish REST services. Use the following command to check whether the 1080 port is already in use:
+sudo lsof -i:1080
+
+Solution:
+ kill the hanged out process.
+

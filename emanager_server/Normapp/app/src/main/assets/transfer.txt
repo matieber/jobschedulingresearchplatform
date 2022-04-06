@@ -1,0 +1,8 @@
+
+
+Assuming you mean 1 MB/s, this seems about right. A realistic system like this probably has a hardware maximum of about 54Mbps and a usable link bandwidth of about 20Mbps given typical parameters of distance, interference, and so on.. There are 8 bits in a byte, all data has to be sent twice (once to the AP and once from the AP), data has to be acknowledged, and it takes time for devices to switch from receiving to transmitting.
+
+So, start with 20Mbps usable link bandwidth. All data has to be sent twice, so that leaves 10Mbps. Time for handoffs and acknowledgements is about 20%, so that leaves 8Mbps. There are 8 bits in a byte, so 1MB/s is about what we'd expect.
+
+For a transfer between WiFi devices using an AP over 802.11g under realistic conditions, 1MB/s is about right.
+
