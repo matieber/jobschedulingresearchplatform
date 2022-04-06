@@ -1,0 +1,25 @@
+{
+"benchmarkDefinitions" : [
+	{
+		"benchmarkId" : "idle_discharging_job",
+		"benchmarkClass" : "cpuBenchmark.CPUBenchmark",
+		"variants" : [
+			{ 
+			  "variantId" : "cpu0_discharging_screenOff",
+			  "paramsSamplingStage" : { "names": ["convergenceThreshold"], "values": ["0.1"] },
+			  "paramsRunStage" : {"screenState": "off", "names": ["cpuLevel"], "values": ["0.0"]},
+			  "energyPreconditionRunStage" : {"requiredBatteryState" : "discharging", "startBatteryLevel" : -1, "endBatteryLevel" : "@@target_level@@"}
+			}
+		]
+	}
+ 
+  ],
+
+"devices" : [
+	{
+		"deviceModel": "@@model1@@",
+		"variants": [ "cpu0_discharging_screenOff" ]
+	}
+  ]
+
+}

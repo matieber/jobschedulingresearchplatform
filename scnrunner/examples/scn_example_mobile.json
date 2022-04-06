@@ -1,0 +1,44 @@
+{ 
+    "scn_id":"cycling_8998img_1min_mobile",
+    "app_dir":"dogs_finder_app",
+    "results_dir":"../dogs_finder_app/results/cycling_8998img_1min_mobile/vie_31_dic_2021_11:34:28_-03",
+    "results_file":"../dogs_finder_app/results/cycling_8998img_1min_mobile/vie_31_dic_2021_11:34:28_-03/cycling_8998img_1min_mobile.csv",
+    "log_file":"../dogs_finder_app/results/cycling_8998img_1min_mobile/vie_31_dic_2021_11:34:28_-03/cycling_8998img_1min_mobile.log",
+    "stream_source": {
+        "type":"SimulatedFromImageFolder",
+        "field":{
+            "img_folder":"dogs_finder_app/frameRoot/cycling",
+            "img_extension":"jpg",
+            "per_job_frames":10,
+            "per_burst_jobs":3,
+            "millis_btw_jobs":33,
+            "millis_btw_bursts":1000,
+            "launch_images_server":"True",
+            "image_server_port":8001,
+            "job_builder": {
+                "builder_class":"dogs_finder_app.job.MobileDogsFinderJobBuilder",
+                "builder_params":{
+                    "json_template":"dogs_finder_app/templates/benchmarkConfig-template.json",
+					"test_id": "cycling_8998img_1min_mobile"
+                }
+            }
+
+        }
+    },
+    "processor": {
+        "hardware_support":"hardsupp.mobile_cluster.LabMobileCluster",
+        "processor_impl":{
+            "emanager_server_url":"http://localhost:1080/",
+            "emanager_output_path": "../raspberry4-dewsim-server/profiles",
+            "devs_batt_init":{
+                        "motorola_moto_g6":-1.0
+            },
+            "logic":{
+                "processor_class":"job.job_scheduling.RoundRobin",
+				"processor_params": {
+                }
+            }
+        }
+    }
+
+} 

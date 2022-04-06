@@ -1,0 +1,43 @@
+{ 
+	"scn_id": "cycling_8998img_1min_multicore",
+	"app_dir":	"dogs_finder_app",
+	"results_dir":"",
+	"log_file":"",
+	"stream_source": {
+		"type":"SimulatedFromImageFolder",
+		"field":{
+			"img_folder":"dogs_finder_app/frameRoot/cycling",
+			"img_extension":"jpg",
+			"per_job_frames": 10,
+			"per_burst_jobs": 3,
+			"millis_btw_jobs": 33,
+			"millis_btw_bursts": 1000,
+			"job_builder": {
+				"builder_class":"dogs_finder_app.job.DogsFinderJobBuilder",
+				"builder_params":{
+					"json_template":"dogs_finder_app/templates/benchmarkConfig-template.json",
+					"jobs_dir":"dogs_finder_app/jobs",
+					"test_id": "cycling_8998img_1min_multicore"
+				}
+			}
+
+		}
+	},
+	"processor": {
+		"hardware_support": "hardsupp.single_board_computer.SBC",
+		"processor_impl": {
+            "launch_cpu_usage_monitor": "true",
+			"logic": {
+				"processor_class": "dogs_finder_app.app_multicore.DogsFinderMulticore",
+				"processor_params": {
+					"tflite_model":"dogs_finder_app/tflite_models/yolov4-tiny-416.tflite",
+					"labels":"dogs_finder_app/tflite_models/coco.names",
+					"thres_detect":0.5,
+					"input_height":416,
+					"input_width":416
+				}
+			}
+		}
+	}
+
+} 
