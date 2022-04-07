@@ -197,8 +197,6 @@ class ESP8266SwitchManager:
         self.espchip = serial.Serial("/dev/ttyUSB0", 115200)
         time.sleep(5)
         try:
-            #ssid = "isistan"
-            #password = "Mn5w4ttsEWXEiHU7"
             # arduino.write(('campus ' + ' ' + password).encode('UTF-8'))
             self.espchip.write((ssid + ' ' + password).encode('UTF-8'))
             out = self.espchip.readline()
