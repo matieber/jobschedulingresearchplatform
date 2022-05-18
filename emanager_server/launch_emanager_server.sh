@@ -17,7 +17,7 @@ function killInstaller() {
 	fi
 }
 
-echo "Specify as parameter the number of devices to use (if different than the max supported by the configured driver"
+echo "Specify as parameter the number of devices to use (if different than the max supported by the configured energy hardware driver)"
 init $*
 python3 emanager_server.py $1
 adb disconnect

@@ -23,7 +23,6 @@ urls = (
     '/device/(.+)', 'DeviceService',
     '/job/(.+)', 'JobService',
     '/info/(.+)', 'InfoService',
-    '/devices/(.+)', 'ConnectedDevicesService',
     '/connection/(.+)', 'MobilityService'
 )
 
@@ -188,12 +187,6 @@ class ESP8266SwitchManager:
         return result.returncode == 0
 
     def initializeESP8266Device(self, ssid, password):
-        '''if devFile is None:
-			files = [f for f in os.listdir('/dev') if re.match(r'ttyUSB[0-9]$', f)]
-			if len(files) == 0:
-				raise Exception("Device not found!")
-			devFile = files[0]'''
-        # self.arduino = serial.Serial("/dev/" + devFile, 115200)
         self.espchip = serial.Serial("/dev/ttyUSB0", 115200)
         time.sleep(5)
         try:
@@ -288,12 +281,6 @@ class MockSwitchManager:
         return ['unknown' for i in range(self.maxSupportedDevices)]
 
 
-class NullSwitchManager(MockSwitchManager):
-
-    def showSwitchDialog(self, message):
-        pass
-
-
 class DeviceJobQueue:
 
     def __init__(self):
@@ -335,13 +322,6 @@ class FCFS:
             except queue.Empty:
                 return None, None
 
-        '''if deviceEntry.queue.empty():
-            if self.singleJobsQueue.empty():
-                return None, None
-            p = self.singleJobsQueue.get()
-        else:
-            p = deviceEntry.queue.get()
-        '''
         if p is not None:
             jobId = p[0]
             taskData = p[1]
@@ -351,25 +331,6 @@ class FCFS:
             return taskData, jobId
         else:
             return None, None
-
-    '''backup original nextJob
-    
-        deviceEntry = self.pendingJobsByDevice[deviceModel]
-        if deviceEntry.queue.empty():            
-            return None, None
-        p = deviceEntry.queue.get()
-        jobId = p[0]
-        taskData = p[1]
-        taskToExec = taskData["devices"][0]["variants"]
-        taskData["runOrder"] = taskToExec
-        deviceEntry.currJobId = jobId
-        return taskData, jobId
-    '''
-
-    ''' 
-		The method empties the jobs queue for the device specified as parameter. currJobID, i.e, the job  
-		pulled by the device before this method call, remains without changes.
-	'''
 
     def resetDeviceJobsState(self, deviceModel):
         deviceEntry = self.pendingJobsByDevice[deviceModel]
@@ -422,7 +383,6 @@ class Synchronizer:
             self.scheduler.onDeviceEnter(deviceModel)
             self.logger.info("[statistics]#" + deviceModel + "at " + deviceIp + ", slotID: " + str(deviceData.slotId) +" registered")
             self.registeredDevicesLock.release()
-        # TODO Maintain profiles in memory
         else:
             # The device is updating dynamic info (e.g. battery level
             self.deviceState[deviceModel].rssi = int(webData["rssi"])
@@ -570,8 +530,7 @@ class DewSimWebPyService:
         web.header('Content-Type', 'application/json', unique=True)
 
     # Differentiates between severe errors (i.e. the client should cease operation)
-    # versus less severe errors (i.e. the client should re-attempt to do the request, such as re-uploading a result file)
-    # Just for now, if any error is returned, the client will cease operation
+    # versus less severe errors (i.e. the mobile device client should re-attempt to do the request, such as re-uploading a result file)
     def buildJSONError(self, ex, doPrint=True):
         if doPrint:
             logger.error(str(ex))
@@ -667,21 +626,18 @@ class InfoService(DewSimWebPyService):
 
     def __init__(self):
         super().__init__()
-        # Hardcoded values until have a mechanism to populate such information on the fly, i.e, at the time a
-        # device joins the cluster.
         self.benchmark = {}
 
         # Linpack for android benchmark multithread
-        self.benchmark["samsung_SM_A022M"] = {"mflops": 242765772, "tflite4th": 230627483, "cow_bcs": 155855625}
-        self.benchmark["samsung_SM_A305G"] = {"mflops": 674633950, "tflite4th": 505975462, "cow_bcs": 0}
-        self.benchmark["Xiaomi_Redmi_Note_7"] = {"mflops": 914064600, "tflite4th": 685548450, "cow_bcs": 484454238}
-        self.benchmark["Xiaomi_Mi_A2_Lite"] = {"mflops": 642355050, "tflite4th": 321177525, "cow_bcs": 0}
-        self.benchmark["motorola_moto_g6"] = {"mflops": 323962333, "tflite4th": 161981166, "cow_bcs": 139303803}
-        self.benchmark["motorola_moto_g9_play"] = {"mflops": 841400523, "tflite4th": 546910339, "cow_bcs": 434162669}
-
-        self.benchmark["Xiaomi_M2004J19C"] = {"mflops": 1214064600, "tflite4th": 0}
-        self.benchmark["motorola_moto_g7_power"] = {"mflops": 0, "tflite4th": 0}
-        self.benchmark["samsung_SM_P610"] = {"mflops": 0, "tflite4th": 0}
+        self.benchmark["samsung_SM_A022M"] = {"mflops": 242765772}
+        self.benchmark["samsung_SM_A305G"] = {"mflops": 674633950}
+        self.benchmark["Xiaomi_Redmi_Note_7"] = {"mflops": 914064600}
+        self.benchmark["Xiaomi_Mi_A2_Lite"] = {"mflops": 642355050}
+        self.benchmark["motorola_moto_g6"] = {"mflops": 323962333}
+        self.benchmark["motorola_moto_g9_play"] = {"mflops": 841400523}
+        self.benchmark["Xiaomi_M2004J19C"] = {"mflops": 1214064600}
+        self.benchmark["motorola_moto_g7_power"] = {"mflops": 0}
+        self.benchmark["samsung_SM_P610"] = {"mflops": 0}
 
     def doGet(self, deviceModel, web):
         try:
@@ -849,7 +805,6 @@ def buildScheduler(logger, schedulerClass):
 def buildSwitchManager(logger, driverClass, energyConfig):
     driverDict = {"ArduinoSwitchManager": ArduinoSwitchManager,
                   "MockSwitchManager": MockSwitchManager,
-                  "NullSwitchManager": NullSwitchManager,
                   "ESP8266SwitchManager": ESP8266SwitchManager}
     params = None
     if not "params" in energyConfig.keys():
@@ -894,16 +849,13 @@ logger.addHandler(ch)
 
 logger.info("Starting server, " + str(datetime.now()))
 
-BENCHMARK_CONFIG_FILE = None
 PROFILES_FOLDER = None
-MOCK_ENERGY = False
 ENERGY_CONFIGURATION = None
 
 try:
     with open('serverConfig.json') as json_file:
         data = json.load(json_file)
         PROFILES_FOLDER = data['server']['profilesFolder']
-        BENCHMARK_CONFIG_FILE = data['benchmark']['benchmarkConfigFile']
         ENERGY_HARDWARE = data['benchmark']['energyHardware']
         ENERGY_CONFIGURATION = data['benchmark']['energyHardwareDefinitions'][ENERGY_HARDWARE]
         SCHEDULER_ALGORITHM = data['benchmark']['scheduler']
@@ -914,7 +866,6 @@ except Exception as e:
 logger.info("*** Press ctrl+C if you want to stop the test at any point ***")
 logger.info("*** You can also kill -KILL or kill -TERM this process ***")
 
-logger.info("BENCHMARK_CONFIG_FILE: " + BENCHMARK_CONFIG_FILE)
 logger.info("PROFILES_FOLDER: " + str(PROFILES_FOLDER))
 logger.info("ENERGY_HARDWARE: " + str(ENERGY_HARDWARE))
 logger.info("SCHEDULER_ALGORITHM: " + str(SCHEDULER_ALGORITHM))

@@ -7,9 +7,6 @@
   },
   "benchmark": {
     "energyHardwareDefinitions": {
-      "NullSwitchManager" : {
-        "maxSupportedDevices" : 1
-      },
       "MockSwitchManager" : {
         "maxSupportedDevices" : 1
       },
@@ -17,7 +14,7 @@
         "maxSupportedDevices" : 4
       },
       "ESP8266SwitchManager": {
-        "maxSupportedDevices" : 2,
+        "maxSupportedDevices" : 4,
         "params":{
             "wifi_SSID": "net",
             "wifi_PASS": "pass"
@@ -26,7 +23,6 @@
     },
     "scheduler": "FCFS",
     "energyHardware" : "MockSwitchManager",
-    "appLaunchMode" : "automatic",
-    "benchmarkConfigFile" : "benchmarkConfig.json"
+    "appLaunchMode" : "automatic"
   }
 }
