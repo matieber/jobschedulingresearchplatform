@@ -1,5 +1,5 @@
 # LiveDewStream
-## The first real experimentation platform for executing deep learning on smartphone clusters, ever
+## The first real stream processing platform for executing deep learning on smartphone clusters at the edge, ever
 
 Powered by [<img src="https://www.python.org/static/img/python-logo@2x.png" alt="Python" style="zoom:25%;" />](https://www.python.org) [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Android_logo_2019_%28stacked%29.svg/1200px-Android_logo_2019_%28stacked%29.svg.png" alt="Android" style="zoom: 5%;" />](https://www.android.com)
 
