@@ -46,7 +46,7 @@ function waitNewDevice {
 	adb tcpip 5555
 	sleep 5	
 	adb install -r $2"/app-debug.apk"
-	adb connect $LAST_DEVICE_IP #Connect before usb is unplugged is a fix for an issue of SamsungA02 device
+	adb connect $LAST_DEVICE_IP # Connecting before usb is unplugged is a fix for an issue of the SamsungA02 device
 	waitDisconnectDevice $LAST_DEVICE_ID
 	./scripts/launch_monitor.sh $LAST_DEVICE_IP $1
 
@@ -81,12 +81,6 @@ function getMyIP {
 
 saveServerIp
 
-# Por ahora, el uso es igual: pluguear móvil por móvil.
-# Para automatizar: 
-# 1) esperar wave devices
-# 2) por cada device conectado, instalar APK, detectar USB de c/u, y cerrar USB datos
-# 3) ir a 1)
-
 echo "Installing apk in device(s)."
 rm -rf /tmp/registered_devices
 touch /tmp/registered_devices
@@ -98,7 +92,6 @@ if [ "$1" != "" ]; then
 	MAX_DEVICES=$1
 fi
 echo "Max devices selected for the test: "$MAX_DEVICES
-echo $MAX_DEVICES > /tmp/max_devices_dewsim
 
 # "manual" or "automatic"
 APP_LAUNCH_MODE=$(jq .benchmark.appLaunchMode serverConfig.json | tr -d '\"')

@@ -1,0 +1,46 @@
+Observed behavior: 
+A device doesn't react to a battery level reach where it is supposed to start/finish a new benchmark.
+
+Diagnosis:
+- The behavior happends during a job preparation phase, i.e. while the device charges/discharges to meet the configured battery level before starting a job
+- Using Logcat in the following way: "adb logcat BenchmarkExecutor:D *:s" reveals information of battery condition met but with no effect on the expected execution workflow. Ej: 
+"
+[Variant{variantId='cpu0_charging_screenOff', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='charging_ac', minStartBatteryLevel=-1.0, minEndBatteryLevel=0.1}}]
+D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.1 battState=Charging plugged=true
+"
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Observed behavior:
+CPU monitor is not properly working in a device; src/emanager_server/scripts/measure_cpu.sh is running in the device as per information of "lsof /sdcard/Download/measure_cpu.sh", however, cpu-sample1.txt and cpu-sample2.txt are not present nor constantly updated in the /sdcard/Download directory.
+
+Diagnosis: 
+For an unknown reason, in some device models, measure_cpu.sh runs but it doesn't flush output to cpu-sample1.txt and cpu-sample2.txt.
+
+Solution:
+An automated fix is provided via the script src/emanager_server/scripts/fixed_hanged_cpu_monitor.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Observed behavior: 
+When running src/emanager_server/launch_emanager_server.sh and using arduinoSwitchManager or ESP8266SwitchManager the following error appears in the console:
+
+[Errno 13] could not open port /dev/ttyACM0: [Errno 13] Permission denied: '/dev/ttyACM0'
+
+Diagnosis: 
+Permission problem accessing an RS-232-like over USB device.
+
+Solution:
+Type "sudo chmod 666 /dev/ttyACM0"
+Other more elegant solutions here: https://stackoverflow.com/questions/27858041/oserror-errno-13-permission-denied-dev-ttyacm0-using-pyserial-from-pyth
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Observed behavior:
+Devices fail to ask the emanager server to change the energy switch, i.e., put themselves to charge or discharge via Motrol. The console log throws failed PUT requests.
+
+Diagnosis:
+There is a zombie emanager server instance, perhaps due to an abnormal termination of a previous run. By default, the emanager server utilizes port 1080 to publish REST services. Use the following command to check whether the 1080 port is already in use: "sudo lsof -i:1080"
+
+Solution:
+Kill the hanged out process.

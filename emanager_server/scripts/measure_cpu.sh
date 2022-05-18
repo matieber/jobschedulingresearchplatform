@@ -43,20 +43,17 @@ if [ "$1" == "automatic" ]; then
 fi
 
 # If monitor already running, do not start
-#Pid=$(lsof /sdcard/Download/measure_cpu.sh 2>> /sdcard/Download/errors.txt | grep measure_cpu | grep -v COMMAND | sed -e's/  */ /g' | cut -d' ' -f2)
 COUNT=$(lsof /sdcard/Download/measure_cpu.sh 2>> /sdcard/Download/errors.txt | wc -l)
 if [ "$COUNT" -eq 2 ]; then
+	echo "Monitor already running" >> /sdcard/Download/log.txt
+else
 	> /sdcard/Download/cpu-usage-sample-1.txt
 	> /sdcard/Download/cpu-usage-sample-2.txt
 	while true
 	do
 		cat /proc/stat | head -1 > /sdcard/Download/cpu-usage-sample-1.txt
-		cat /sys/class/kgsl/kgsl-3d0/gpubusy | awk '{print $1 / ($2+1)}' > /sdcard/Download/gpu-usage.txt
 		sleep 1
 		cat /proc/stat | head -1 > /sdcard/Download/cpu-usage-sample-2.txt 
-		cat /sys/class/kgsl/kgsl-3d0/gpubusy | awk '{print $1 / ($2+1)}' > /sdcard/Download/gpu-usage.txt
 		sleep 1
 	done
-else
-	echo "CPU/GPU monitor already running, Pid: "$Pid >> /sdcard/Download/log.txt
 fi

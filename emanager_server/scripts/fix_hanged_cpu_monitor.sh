@@ -24,7 +24,7 @@ if [ ! -z "$measure_cpu_PID" ]; then
 adb -s $1:5555 shell kill $measure_cpu_PID
     echo "measure_cpu.sh PID: $measure_cpu_PID killed"
 else
-    echo "Nothing to do. measure_cpu.sh process is not running at the device"
+    echo "Nothing to do. measure_cpu.sh process is not running in the device"
 fi
 
 myDisconnect

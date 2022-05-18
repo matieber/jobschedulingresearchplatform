@@ -18,5 +18,4 @@ rm /sdcard/Download/cpu-usage-sample-2.txt 2>> /sdcard/Download/errors.txt
 rm /sdcard/Download/measure_cpu.sh 2>> /sdcard/Download/errors.txt
 rm /sdcard/Download/stop_measure_cpu.sh 2>> /sdcard/Download/errors.txt
 rm /sdcard/Download/serverConfig.properties 2>> /sdcard/Download/errors.txt
-rm /sdcard/Download/gpu-usage.txt 2>> /sdcard/Download/errors.txt
 

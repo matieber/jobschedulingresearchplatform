@@ -10,4 +10,3 @@ Classes that write log entries and can help to identify unexpected behaviors:
 adb logcat BenchmarkExecutor:D *:S
 adb logcat BatteryNotificator:D *:S
 adb logcat BatteryStopCondition:D *:S
-

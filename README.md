@@ -26,7 +26,7 @@ LiveDewStream uses a number of open source projects and Python/OS packages to wo
 - [aapt](https://developer.android.com/studio/command-line/aapt2) - The base builder for Android applications
 - [curl](https://curl.se/) - Command line tool and library for transferring data with URLs 
 
-And of course LiveDewStream itself is open source under GNU GPL with a [public repository](http://github.com/livedewstream) on GitHub.
+And of course LiveDewStream itself is open source under GNU GPL with a [public repository](http://github.com/matieber/livedewstream) on GitHub.
 
 ## Installation
 
@@ -41,6 +41,12 @@ pip3 install pyserial web.py requests
 ```
 
 Moreover, install via the OS package manager the required system packages: python3-tk, jq, adb, net-tools, aapt, and curl. 
+
+The current user must be member of the "dialout" group. From a terminal, type:
+
+```sh
+sudo addgroup $USER dialout
+```
 
 To run the server, just type:
 
@@ -57,7 +63,7 @@ By default, the Python-based server application will log output to ./log.txt. To
 stdbuf -oL ./launch_emanager_server.sh &> log.txt
 ```
 
-You might need to (re)build the Android app first (Normapp), which is located under src/emanager_server/Normapp. Please check the Android app project build folder.
+You might need to (re)build the Android app first (Normapp), which is located under src/emanager_server/Normapp. Please open the Android app project folder using [Android Studio](https://developer.android.com/studio).
 
 Please also bear in mind that lock screen behavior should be disabled in the participating mobile devices.
 
