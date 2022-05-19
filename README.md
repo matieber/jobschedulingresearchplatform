@@ -20,11 +20,13 @@ LiveDewStream uses a number of open source projects and Python/OS packages to wo
 - [web.py](https://webpy.org/) - Simple and powerful Web framework for Python
 - [requests](https://docs.python-requests.org) - Elegant and simple HTTP library for Python
 - [python3-tk](https://docs.python.org/3/library/tkinter.html) - Python interface to Tcl/Tk
+- [importlib](https://docs.python.org/3/library/importlib.html) - Library to create custom Python importers 
+- [functools](https://docs.python.org/3/library/functools.html) - Python module for working with high-order functions and operations
 - [jq](https://stedolan.github.io/jq/) - Lightweight and flexible command-line JSON processor
 - [adb](https://developer.android.com/studio/command-line/adb) - Versatile command-line tool to communicate with/control Android-powered devices
 - [net-tools](https://sourceforge.net/projects/net-tools/) - The collection of base networking utilities for Linux
 - [aapt](https://developer.android.com/studio/command-line/aapt2) - The base builder for Android applications
-- [curl](https://curl.se/) - Command line tool and library for transferring data with URLs 
+- [curl](https://curl.se/) - Command line tool and library for transferring data with URLs
 
 And of course LiveDewStream itself is open source under GNU GPL with a [public repository](http://github.com/matieber/livedewstream) on GitHub.
 
