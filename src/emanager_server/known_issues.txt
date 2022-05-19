@@ -1,14 +1,3 @@
-Observed behavior: 
-A device doesn't react to a battery level reach where it is supposed to start/finish a new benchmark.
-
-Diagnosis:
-- The behavior happends during a job preparation phase, i.e. while the device charges/discharges to meet the configured battery level before starting a job
-- Using Logcat in the following way: "adb logcat BenchmarkExecutor:D *:s" reveals information of battery condition met but with no effect on the expected execution workflow. Ej: 
-"
-[Variant{variantId='cpu0_charging_screenOff', paramsSamplingStage=ParamsSamplingStage, paramsRunStage=ParamsRunStage, energyPreconditionRunStage=EnergyPreconditionRunStage{requiredBatteryState='charging_ac', minStartBatteryLevel=-1.0, minEndBatteryLevel=0.1}}]
-D BenchmarkExecutor: BatteryUpdate: reqStartBattLevel=-1.0, currBattLevel=0.1 battState=Charging plugged=true
-"
-
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Observed behavior:
