@@ -7,9 +7,11 @@ LiveDewStream ... **[Abstract]**
 
 ## Features
 
-- Feature 1
-- Feature 2
-- ...
+- Python server to coordinate tensorflow jobs on attached smartphones
+- Software-managed energy supply for cluster smartphones
+- Android application to coordinate intra-smartphone job execution and smartphone-server communication
+- Configurable client-side Python module to submit stream processing experiments to a smartphone cluster
+- Python-based framework with abstractions to specialize entities such as stream source and job schedulers
 
 ## Technical details
 
