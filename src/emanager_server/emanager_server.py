@@ -348,6 +348,7 @@ class DeviceState:
 
     def __init__(self):
         self.rssi = 0
+        self.mflops = 0
         self.currentBatteryLevel = -1.0
         self.firstBatteryLevel = -1.0
         self.ip = None
@@ -357,7 +358,7 @@ class DeviceState:
 
     def toString(self):
         ret = "ip: " + str(self.ip) + "  rssi: " + str(self.rssi) + " curBattLevel: " + str(self.currentBatteryLevel) \
-              + " running_jobs: " + str(self.runningJobs) + " virtuallyConnected: " + str(self.virtuallyConnected) + " slotId: " + str(self.slotId)
+              + " running_jobs: " + str(self.runningJobs) + " virtuallyConnected: " + str(self.virtuallyConnected) + " slotId: " + str(self.slotId) + " mflops: " + str(self.mflops)
         return ret
 
 
@@ -379,6 +380,21 @@ class Synchronizer:
             deviceData.firstBatteryLevel = float(webData["currentBatteryLevel"])
             deviceData.currentBatteryLevel = float(webData["currentBatteryLevel"])
             deviceData.slotId = int(webData["slotId"])
+            try:
+                deviceData.mflops = int(webData["mflops"])
+            except: 
+                # The application in the device might not sent mflops data
+                # In this case, all devices will be treated as equal by schedulers w.r.t. computational power
+                # mflops data could be obtained using Linpack for Android (multithread version)
+                # Some tests reveal: 
+                # samsung_SM_A022M => {"mflops": 242765772}
+                # samsung_SM_A305G => {"mflops": 674633950}
+                # Xiaomi_Redmi_Note_7 => {"mflops": 914064600}
+                # Xiaomi_Mi_A2_Lite => {"mflops": 642355050}
+                # motorola_moto_g6 => {"mflops": 323962333}
+                # motorola_moto_g9_play => {"mflops": 841400523}
+                # Xiaomi_M2004J19C => {"mflops": 1214064600}
+                pass
             self.deviceState[deviceModel] = deviceData
             self.scheduler.onDeviceEnter(deviceModel)
             self.logger.info("[statistics]#" + deviceModel + "at " + deviceIp + ", slotID: " + str(deviceData.slotId) +" registered")
@@ -441,6 +457,7 @@ class Synchronizer:
         self.registeredDevicesLock.acquire()
         deviceData = self.deviceState[deviceModel]
 
+        info_dict["mflops"] = deviceData.mflops
         info_dict["running_jobs"] = deviceData.runningJobs
         info_dict["rssi"] = deviceData.rssi
         info_dict["currentBatteryLevel"] = deviceData.currentBatteryLevel
@@ -626,18 +643,6 @@ class InfoService(DewSimWebPyService):
 
     def __init__(self):
         super().__init__()
-        self.benchmark = {}
-
-        # Linpack for android benchmark multithread
-        self.benchmark["samsung_SM_A022M"] = {"mflops": 242765772}
-        self.benchmark["samsung_SM_A305G"] = {"mflops": 674633950}
-        self.benchmark["Xiaomi_Redmi_Note_7"] = {"mflops": 914064600}
-        self.benchmark["Xiaomi_Mi_A2_Lite"] = {"mflops": 642355050}
-        self.benchmark["motorola_moto_g6"] = {"mflops": 323962333}
-        self.benchmark["motorola_moto_g9_play"] = {"mflops": 841400523}
-        self.benchmark["Xiaomi_M2004J19C"] = {"mflops": 1214064600}
-        self.benchmark["motorola_moto_g7_power"] = {"mflops": 0}
-        self.benchmark["samsung_SM_P610"] = {"mflops": 0}
 
     def doGet(self, deviceModel, web):
         try:
@@ -653,8 +658,9 @@ class InfoService(DewSimWebPyService):
                 virtuallyConnected = infotuple["virtuallyConnected"]
                 print("model: " + device + " pendingJobs: "+ str(infotuple["pending_jobs"]) + " runningJobs: " + str(infotuple["running_jobs"]))
                 if connected == "any" or (connected == str(virtuallyConnected).lower()):
+                    mflops_dict = {"mflops": infotuple["mflops"]}
                     nextDevice = {"model": device, "currentLevel": infotuple["currentBatteryLevel"],
-                                  "benchmark": self.benchmark[device], "rssi": infotuple["rssi"],
+                                  "benchmark": mflops_dict, "rssi": infotuple["rssi"],
                                   "pendingJobs": infotuple["pending_jobs"], "runningJobs": infotuple["running_jobs"],
                                   "connected:": virtuallyConnected, "slotId": infotuple["slotId"], "ip":infotuple["ip"]}
                     response["info"].append(nextDevice)
