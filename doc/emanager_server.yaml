@@ -1,0 +1,287 @@
+---
+swagger: "2.0"
+info:
+  description: Live Dew Stream Documentation
+  version: 1.0.0
+  title: liveDewStream
+  contact:
+    email: matias.hirsch@isistan.unicen.edu.ar
+host: virtserver.swaggerhub.com
+basePath: /jmt977/livedewstream/1.0.0
+tags:
+- name: EnergySwitchService
+  description: Querying and switching smartphone energy state
+- name: DeviceService
+  description: Registering and coordinating smartphones and e_manager_server in order to execute jobs
+- name: JobService
+  description: Managing incoming jobs
+- name: InfoService
+  description: Querying information about attached smartphones
+- name: MobilityService
+  description: Logically connecting/disconnecting smartphones
+schemes:
+- https
+paths:
+  /energy/{deviceModel}:
+    put:
+      tags:
+      - EnergySwitchService
+      summary: Switches a slot number to a given energy state
+      parameters:
+      - name: deviceModel
+        in: path
+        description: Device model that need to be switched
+        required: true
+        type: string
+      - name: slotId
+        in: query
+        description: Slot ID to switch energy state
+        required: true
+        type: integer
+      - name: requiredEnergyState
+        in: query
+        description: Energy state that needs to be added to a slot number
+        required: true
+        type: string
+        default: discharging
+        enum:
+        - ac_charging
+        - usb_charging
+        - discharging
+      responses:
+        "200":
+          description: Successful
+  /device/{deviceModel}:
+    get:
+      tags:
+      - DeviceService
+      summary: Asks for jobs to execute
+      parameters:
+      - name: deviceModel
+        in: path
+        description: Device model to know the state
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/BenchmarkDefinitions'
+  /device/zipfile:
+    post:
+      tags:
+      - DeviceService
+      summary: Submits finished job results
+      consumes:
+      - application/zip
+      - multipart/form-data
+      parameters:
+      - name: zipfile
+        in: formData
+        description: content in zip format
+        required: false
+        type: file
+      responses:
+        "200":
+          description: Successful
+  /device:
+    put:
+      tags:
+      - DeviceService
+      summary: Updates smartphone info (battery level and RSSI)
+      consumes:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: deviceModel
+        required: true
+        schema:
+          $ref: '#/definitions/SmartphoneInfo'
+      responses:
+        "200":
+          description: Successful
+  /job/{deviceModel}:
+    put:
+      tags:
+      - JobService
+      summary: Blanks (reset) a given device job queue
+      parameters:
+      - name: deviceModel
+        in: path
+        description: Data for reset device job queue
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Successful
+  /job:
+    post:
+      tags:
+      - JobService
+      summary: Submits jobs for execution in smartphones
+      consumes:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: Job
+        required: true
+        schema:
+          $ref: '#/definitions/BenchmarkDefinitions'
+      responses:
+        "200":
+          description: Successful
+  /info/all:
+    get:
+      tags:
+      - InfoService
+      summary: Returns current battery level and RSSI, IP, slot number, connection state (see next Service), and pending jobs of attached smartphones
+      parameters: []
+      responses:
+        "200":
+          description: Successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/ModelInfo'
+  /connection/{deviceModel}:
+    put:
+      tags:
+      - MobilityService
+      summary: Changes the connection state of a smartphone. Disconnected means the smartphone is still attached to the server/energy device, but it is not considered for executing incoming jobs (default is connected)
+      consumes:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: deviceModel
+        required: true
+        schema:
+          $ref: '#/definitions/ConnectionInfo'
+      - name: deviceModel
+        in: path
+        description: Device model that need to be updated
+        required: true
+        type: string
+      responses:
+        "200":
+          description: Successful
+definitions:
+  SmartphoneInfo:
+    type: object
+    properties:
+      battery_Mah:
+        type: integer
+      cpu_mhz:
+        type: integer
+      currentBatteryLevel:
+        type: number
+      rssi:
+        type: number
+      slotId:
+        type: integer
+  ConnectionInfo:
+    type: object
+    properties:
+      requiredVirtualConnectionState:
+        type: array
+        description: Connection state that needs to be changed to a smartphone
+        items:
+          type: string
+          default: connected
+          enum:
+          - connected
+          - disconnected
+  ModelInfo:
+    type: object
+    properties:
+      currentLevel:
+        type: number
+      benchmark:
+        $ref: '#/definitions/BenchmarkResult'
+      rssi:
+        type: integer
+      pendingJobs:
+        type: integer
+      runningJobs:
+        type: integer
+      connected:
+        type: boolean
+      slotId:
+        type: integer
+      ip:
+        type: string
+  BenchmarkResult:
+    type: object
+    properties:
+      mflops:
+        type: integer
+        format: int64
+      tflite4th:
+        type: integer
+        format: int64
+      cow_bcs:
+        type: integer
+        format: int64
+  BenchmarkDefinitions:
+    type: object
+    properties:
+      BenchmarkDefinition:
+        $ref: '#/definitions/BenchmarkDefinitions_BenchmarkDefinition'
+      Devices:
+        $ref: '#/definitions/BenchmarkDefinitions_Devices'
+  BenchmarkDefinitions_BenchmarkDefinition_variants_paramSamplingStage:
+    type: object
+    properties:
+      names:
+        type: string
+      values:
+        type: number
+  BenchmarkDefinitions_BenchmarkDefinition_variants_paramRunStage:
+    type: object
+    properties:
+      screenState:
+        type: string
+      names:
+        type: string
+      values:
+        type: number
+  BenchmarkDefinitions_BenchmarkDefinition_variants_EnergyPreconditionRunStage:
+    type: object
+    properties:
+      requiredBatteryState:
+        type: string
+      startBatteryLevel:
+        type: number
+      endBatteryLevel:
+        type: number
+  BenchmarkDefinitions_BenchmarkDefinition_variants:
+    type: object
+    properties:
+      variantId:
+        type: string
+      paramSamplingStage:
+        $ref: '#/definitions/BenchmarkDefinitions_BenchmarkDefinition_variants_paramSamplingStage'
+      paramRunStage:
+        $ref: '#/definitions/BenchmarkDefinitions_BenchmarkDefinition_variants_paramRunStage'
+      EnergyPreconditionRunStage:
+        $ref: '#/definitions/BenchmarkDefinitions_BenchmarkDefinition_variants_EnergyPreconditionRunStage'
+  BenchmarkDefinitions_BenchmarkDefinition:
+    type: object
+    properties:
+      benchmarkId:
+        type: string
+      benchmarkClass:
+        type: string
+      variants:
+        $ref: '#/definitions/BenchmarkDefinitions_BenchmarkDefinition_variants'
+  BenchmarkDefinitions_Devices:
+    type: object
+    properties:
+      deviceModel:
+        type: string
+      variants:
+        type: string
