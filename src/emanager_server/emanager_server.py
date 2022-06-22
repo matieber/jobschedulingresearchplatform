@@ -48,24 +48,9 @@ class RegularError(Error):
         super().__init__(False, specificMessage)
 
 
-class DeviceStateType(enum.Enum):
-    STARTING = "starting"
-    IDLE = "idle"
-    BUSY = "busy"
-    TERMINATED = "terminated"
+class EnergyDriver:
 
-    @staticmethod
-    def from_str(label):
-        if label in ('idle'):
-            return DeviceStateType.IDLE
-        elif label in ('busy'):
-            return DeviceStateType.BUSY
-        elif label in ('starting'):
-            return DeviceStateType.STARTING
-        elif label in ('terminated'):
-            return DeviceStateType.TERMINATED
-        else:
-            raise NotImplementedError
+    def switch(self, deviceModel, state, slotId): pass
 
 
 class SwitchStateType(enum.Enum):
@@ -88,7 +73,7 @@ class SwitchStateType(enum.Enum):
             raise NotImplementedError
 
 
-class ArduinoSwitchManager:
+class ArduinoSwitchManager(EnergyDriver):
 
     def __init__(self, logger, maxDevices, params):
         self.arduino = None
@@ -142,7 +127,7 @@ class ArduinoSwitchManager:
     def ensureOn(self):
         self.writeArduinoChar('F')
 
-    def switchTo(self, deviceModel, state, slotId):
+    def switch(self, deviceModel, state, slotId):
         if deviceModel == "all" and state == SwitchStateType.OFF:
             self.ensureOff()
         elif deviceModel == "all" and state == SwitchStateType.ON_AC:
@@ -155,11 +140,8 @@ class ArduinoSwitchManager:
         self.ensureOff()
         self.arduino.close()
 
-    def getEnergyState(self):
-        return ['unknown' for i in range(self.noOfInputs)]
 
-
-class ESP8266SwitchManager:
+class ESP8266SwitchManager(EnergyDriver):
 
     def __init__(self, logger, maxDevices, params):
         self.espchip = None
@@ -240,7 +222,7 @@ class ESP8266SwitchManager:
     def ensureOn(self):
         self.writeESP8266Char('9')
 
-    def switchTo(self, deviceModel, state, slotId):
+    def switch(self, deviceModel, state, slotId):
         if deviceModel == "all" and state == SwitchStateType.OFF:
             self.ensureOff()
         elif deviceModel == "all" and state == SwitchStateType.ON_AC:
@@ -253,11 +235,7 @@ class ESP8266SwitchManager:
         self.ensureOff()
         self.espchip.close()
 
-    def getEnergyState(self):
-        return ['unknown' for i in range(self.noOfInputs)]
-
-
-class MockSwitchManager:
+class MockSwitchManager(EnergyDriver):
 
     def __init__(self, logger, maxSupportedDevices, params):
         self.maxSupportedDevices = maxSupportedDevices
@@ -273,12 +251,9 @@ class MockSwitchManager:
         parent.withdraw()
         info = messagebox.showinfo('Switch energy', message, parent=parent)
 
-    def switchTo(self, deviceModel, state, slotId):
+    def switch(self, deviceModel, state, slotId):
         newState = "ON" if state == SwitchStateType.ON_USB or state == SwitchStateType.ON_AC else "OFF"
         self.showSwitchDialog("Put " + str(slotId) + " for " + deviceModel + " to " + newState)
-
-    def getEnergyState(self):
-        return ['unknown' for i in range(self.maxSupportedDevices)]
 
 
 class DeviceJobQueue:
@@ -288,8 +263,7 @@ class DeviceJobQueue:
         self.currJobId = None
 
 
-# First-Come First-Served
-class FCFS:
+class JobDispatcher:
     def __init__(self, logger):
         self.logger = logger
         self.pendingJobsByDeviceLock = threading.Lock()
@@ -302,14 +276,16 @@ class FCFS:
         self.pendingJobsByDevice[deviceModel] = DeviceJobQueue()
         self.pendingJobsByDeviceLock.release()
 
-    def onArriveJob(self, nextJobId, deviceModel, jobData):
+    def push(self, jobData):
+        nextJobId = jobData["benchmarkDefinitions"][0]["benchmarkId"]
+        deviceModel = jobData["devices"][0]["deviceModel"]
         self.logger.info('[output]#Job Submission id:' + nextJobId + ' for device:' + deviceModel)
         if str(deviceModel).lower() == "any":
             self.singleJobsQueue.put((nextJobId, jobData))
         else:
             self.pendingJobsByDevice[deviceModel].queue.put((nextJobId, jobData))
 
-    def nextJob(self, deviceModel):
+    def pull(self, deviceModel):
         deviceEntry = self.pendingJobsByDevice[deviceModel]
 
         # first consume device jobs queue. if empty then  consume from shared jobs queue
@@ -362,42 +338,63 @@ class DeviceState:
         return ret
 
 
-class Synchronizer:
-    def __init__(self, logger, scheduler):
+class DeviceRegister:
+    def __init__(self, logger, job_dispatcher):
         self.logger = logger
         self.registeredDevicesLock = threading.RLock()
         self.deviceState = {}
-        self.scheduler = scheduler
+        self.job_dispatcher = job_dispatcher
 
-    def updateDevice(self, deviceModel, webData, deviceIp):
+    def get_status(self, deviceModel):
+        info_dict = {}
+        self.registeredDevicesLock.acquire()
+        deviceData = self.deviceState[deviceModel]
+
+        info_dict["mflops"] = deviceData.mflops
+        info_dict["running_jobs"] = deviceData.runningJobs
+        info_dict["rssi"] = deviceData.rssi
+        info_dict["currentBatteryLevel"] = deviceData.currentBatteryLevel
+        info_dict["ip"] = deviceData.ip
+        info_dict["slotId"] = deviceData.slotId
+        info_dict["virtuallyConnected"] = deviceData.virtuallyConnected
+        info_dict["pending_jobs"] = self.countPendingJobsByDevice(deviceModel)
+        self.registeredDevicesLock.release()
+
+        return info_dict
+
+    def register(self, deviceModel, webData, deviceIp):
+        path = PROFILES_FOLDER + "/" + deviceModel
+        os.makedirs(path, exist_ok=True)
+        deviceData = DeviceState()
+        deviceData.ip = deviceIp
+        deviceData.firstBatteryLevel = float(webData["currentBatteryLevel"])
+        deviceData.currentBatteryLevel = float(webData["currentBatteryLevel"])
+        deviceData.slotId = int(webData["slotId"])
+        try:
+            deviceData.mflops = int(webData["mflops"])
+        except:
+            # The application in the device might not sent mflops data
+            # In this case, all devices will be treated as equal by schedulers w.r.t. computational power
+            # mflops data could be obtained using Linpack for Android (multithread version)
+            # Some tests reveal:
+            # samsung_SM_A022M => {"mflops": 242765772}
+            # samsung_SM_A305G => {"mflops": 674633950}
+            # Xiaomi_Redmi_Note_7 => {"mflops": 914064600}
+            # Xiaomi_Mi_A2_Lite => {"mflops": 642355050}
+            # motorola_moto_g6 => {"mflops": 323962333}
+            # motorola_moto_g9_play => {"mflops": 841400523}
+            # Xiaomi_M2004J19C => {"mflops": 1214064600}
+            pass
+        self.deviceState[deviceModel] = deviceData
+        self.job_dispatcher.onDeviceEnter(deviceModel)
+        self.logger.info(
+            "[statistics]#" + deviceModel + "at " + deviceIp + ", slotID: " + str(deviceData.slotId) + " registered")
+
+    def update_status(self, deviceModel, webData, deviceIp):
         self.registeredDevicesLock.acquire()
         if not deviceModel in self.deviceState:
             # First time, so the device is joining...
-            path = PROFILES_FOLDER + "/" + deviceModel
-            os.makedirs(path, exist_ok=True)
-            deviceData = DeviceState()
-            deviceData.ip = deviceIp
-            deviceData.firstBatteryLevel = float(webData["currentBatteryLevel"])
-            deviceData.currentBatteryLevel = float(webData["currentBatteryLevel"])
-            deviceData.slotId = int(webData["slotId"])
-            try:
-                deviceData.mflops = int(webData["mflops"])
-            except: 
-                # The application in the device might not sent mflops data
-                # In this case, all devices will be treated as equal by schedulers w.r.t. computational power
-                # mflops data could be obtained using Linpack for Android (multithread version)
-                # Some tests reveal: 
-                # samsung_SM_A022M => {"mflops": 242765772}
-                # samsung_SM_A305G => {"mflops": 674633950}
-                # Xiaomi_Redmi_Note_7 => {"mflops": 914064600}
-                # Xiaomi_Mi_A2_Lite => {"mflops": 642355050}
-                # motorola_moto_g6 => {"mflops": 323962333}
-                # motorola_moto_g9_play => {"mflops": 841400523}
-                # Xiaomi_M2004J19C => {"mflops": 1214064600}
-                pass
-            self.deviceState[deviceModel] = deviceData
-            self.scheduler.onDeviceEnter(deviceModel)
-            self.logger.info("[statistics]#" + deviceModel + "at " + deviceIp + ", slotID: " + str(deviceData.slotId) +" registered")
+            self.register(deviceModel, webData, deviceIp)
             self.registeredDevicesLock.release()
         else:
             # The device is updating dynamic info (e.g. battery level
@@ -452,33 +449,17 @@ class Synchronizer:
         self.registeredDevicesLock.release()
         return runningJobs
 
-    def getAllDeviceInfo(self, deviceModel):
-        info_dict = {}
-        self.registeredDevicesLock.acquire()
-        deviceData = self.deviceState[deviceModel]
-
-        info_dict["mflops"] = deviceData.mflops
-        info_dict["running_jobs"] = deviceData.runningJobs
-        info_dict["rssi"] = deviceData.rssi
-        info_dict["currentBatteryLevel"] = deviceData.currentBatteryLevel
-        info_dict["ip"] = deviceData.ip
-        info_dict["slotId"] = deviceData.slotId
-        info_dict["virtuallyConnected"] = deviceData.virtuallyConnected
-        info_dict["pending_jobs"] = self.countPendingJobsByDevice(deviceModel)
-        self.registeredDevicesLock.release()
-
-        return info_dict
-
     def getNextTaskListFor(self, deviceModel):
         taskData = None
         jobId = None
         if self.isDeviceVirtuallyConnected(deviceModel):
             self.registeredDevicesLock.acquire()
-            taskData, jobId = self.scheduler.nextJob(deviceModel)
+            taskData, jobId = self.job_dispatcher.pull(deviceModel)
             if jobId is not None:
                 self.logger.info("[statistics]#" + deviceModel + ",startBenchmark-" + str(jobId))
                 self.deviceState[deviceModel].runningJobs += 1
-            self.logger.info("[output]# After " + deviceModel + " requests a job. QueuedJobs: " + str(synchronizer.countPendingJobsByDevice(deviceModel)) +
+            self.logger.info("[output]# After " + deviceModel + " requests a job. QueuedJobs: " + str(
+                self.countPendingJobsByDevice(deviceModel)) +
                              ". Currently running  jobs: " + str(self.deviceState[deviceModel].runningJobs) +
                              ". Last JobId sent: " + str(jobId))
             self.registeredDevicesLock.release()
@@ -488,15 +469,9 @@ class Synchronizer:
         return taskData, jobId
 
 
-    def processArrivedJob(self, jobData):
-        # nextJobId = str(time.time())
-        nextJobId = jobData["benchmarkDefinitions"][0]["benchmarkId"]
-        deviceModel = jobData["devices"][0]["deviceModel"]
-        scheduler.onArriveJob(nextJobId, deviceModel, jobData)
-
     def currentJobByDevice(self, deviceModel):
         self.registeredDevicesLock.acquire()
-        jobsCount = scheduler.currentJobByDevice(deviceModel)
+        jobsCount = self.job_dispatcher.currentJobByDevice(deviceModel)
         self.registeredDevicesLock.release()
         return jobsCount
 
@@ -509,7 +484,7 @@ class Synchronizer:
 
     def countPendingJobsByDevice(self, device):
         self.registeredDevicesLock.acquire()
-        pendingJobs = scheduler.countPendingJobs(device)
+        pendingJobs = self.job_dispatcher.countPendingJobs(device)
         self.registeredDevicesLock.release()
         return pendingJobs
 
@@ -534,7 +509,7 @@ class Synchronizer:
 
     def resetDeviceJobsState(self, deviceModel):
         self.registeredDevicesLock.acquire()
-        scheduler.resetDeviceJobsState(deviceModel)
+        self.job_dispatcher.resetDeviceJobsState(deviceModel)
         self.deviceState[deviceModel].runningJobs = 0
         self.registeredDevicesLock.release()
 
@@ -620,7 +595,7 @@ class EnergySwitchService(DewSimWebPyService):
                 "[output]# " + deviceModel + " asks motrol to put slotId:" + data.slotId + " in " + data.requiredEnergyState)
             requiredEnergyState = SwitchStateType.from_str(data.requiredEnergyState)
 
-            switchManager.switchTo(deviceModel, requiredEnergyState, int(data.slotId))
+            switchManager.switch(deviceModel, requiredEnergyState, int(data.slotId))
             return self.defaultSuccessResponse()
         except SevereError as err:
             raise err
@@ -628,16 +603,6 @@ class EnergySwitchService(DewSimWebPyService):
             raise err
         except Exception as e:
             raise RegularError("Problem processing get request!")
-
-    # Returns energy switch state for a device
-    def doGet(self, deviceModel, web):
-        try:
-            state = json.dumps(switchManager.getEnergyState(), ensure_ascii=False)
-            return self.defaultSuccessResponse(state)
-        except Exception as e:
-            logger.error(str(e))
-            raise RegularError("Problem updating device info!")
-
 
 class InfoService(DewSimWebPyService):
 
@@ -654,7 +619,7 @@ class InfoService(DewSimWebPyService):
             response["success"] = True
             response["info"] = []
             for device in devicesToInform:
-                infotuple = synchronizer.getAllDeviceInfo(device)
+                infotuple = synchronizer.get_status(device)
                 virtuallyConnected = infotuple["virtuallyConnected"]
                 print("model: " + device + " pendingJobs: "+ str(infotuple["pending_jobs"]) + " runningJobs: " + str(infotuple["running_jobs"]))
                 if connected == "any" or (connected == str(virtuallyConnected).lower()):
@@ -730,7 +695,7 @@ class DeviceService(DewSimWebPyService):
             # Info (JSON dictionary) might be:
             # "currentBatteryLevel" (float [0.0, 1.0])
             data = json.loads(web.data())
-            synchronizer.updateDevice(deviceModel, data, web.ctx['ip'])
+            synchronizer.update_status(deviceModel, data, web.ctx['ip'])
             return self.defaultSuccessResponse()
         except Exception as e:
             logger.error(str(e))
@@ -767,7 +732,7 @@ class JobService(DewSimWebPyService):
     def doPost(self, submitting_pc, web):
         try:
             fileContents = web.input().data
-            synchronizer.processArrivedJob(json.loads(fileContents))
+            job_dispatcher.push(json.loads(fileContents))
             return self.defaultSuccessResponse()
         except Exception as e:
             logger.error(str(e))
@@ -776,7 +741,7 @@ class JobService(DewSimWebPyService):
     def doPut(self, deviceModel, web):
         try:
             synchronizer.resetDeviceJobsState(deviceModel)
-            devstate=str(synchronizer.getAllDeviceInfo(deviceModel))
+            devstate=str(synchronizer.get_status(deviceModel))
             return self.defaultSuccessResponse(message=devstate)
         except Exception as e:
             logger.error(str(e))
@@ -803,12 +768,12 @@ def signal_handler(sig, frame):
     logger.info("Ctrl+C processed.")
 
 
-def buildScheduler(logger, schedulerClass):
-    schedulerDict = {"FCFS": FCFS}
-    return schedulerDict[schedulerClass](logger)
+def buildJobDispatcher(logger, dispatcherClass):
+    dispatcherDict = {"FCFS": JobDispatcher}
+    return dispatcherDict[dispatcherClass](logger)
 
 
-def buildSwitchManager(logger, driverClass, energyConfig):
+def buildEnergyDriver(logger, driverClass, energyConfig):
     driverDict = {"ArduinoSwitchManager": ArduinoSwitchManager,
                   "MockSwitchManager": MockSwitchManager,
                   "ESP8266SwitchManager": ESP8266SwitchManager}
@@ -864,7 +829,7 @@ try:
         PROFILES_FOLDER = data['server']['profilesFolder']
         ENERGY_HARDWARE = data['benchmark']['energyHardware']
         ENERGY_CONFIGURATION = data['benchmark']['energyHardwareDefinitions'][ENERGY_HARDWARE]
-        SCHEDULER_ALGORITHM = data['benchmark']['scheduler']
+        JOB_DISPATCHER = data['benchmark']['scheduler']
 except Exception as e:
     logger.error("Error accessing serverConfig.json")
     sys.exit(-1)
@@ -874,23 +839,22 @@ logger.info("*** You can also kill -KILL or kill -TERM this process ***")
 
 logger.info("PROFILES_FOLDER: " + str(PROFILES_FOLDER))
 logger.info("ENERGY_HARDWARE: " + str(ENERGY_HARDWARE))
-logger.info("SCHEDULER_ALGORITHM: " + str(SCHEDULER_ALGORITHM))
 
 logger.info("Loading energy hardware configuration: " + ENERGY_HARDWARE)
 switchManager = None
 try:
-    switchManager = buildSwitchManager(logger, ENERGY_HARDWARE, ENERGY_CONFIGURATION)
+    switchManager = buildEnergyDriver(logger, ENERGY_HARDWARE, ENERGY_CONFIGURATION)
 except Exception as e:
     logger.info(e)
     logger.info("Can't initialize switch manager!")
     sys.exit(-1)
 
-scheduler = None
+job_dispatcher = None
 try:
-    scheduler = buildScheduler(logger, SCHEDULER_ALGORITHM)
+    job_dispatcher = buildJobDispatcher(logger, JOB_DISPATCHER)
 except Exception as e:
     logger.info(e)
-    logger.info("Can't initialize scheduler!")
+    logger.info("Can't initialize jobDisptacher!")
     sys.exit(-1)
 
 signal.signal(signal.SIGINT, signal_handler)
@@ -906,7 +870,7 @@ except Exception as e:
 
 mutexFinish = threading.Semaphore(0)
 
-synchronizer = Synchronizer(logger, scheduler)
+synchronizer = DeviceRegister(logger, job_dispatcher)
 
 gl = globals()
 fvars = {}
