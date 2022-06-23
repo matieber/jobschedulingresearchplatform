@@ -71,7 +71,15 @@ You might need to (re)build the Android app first (Normapp), which is located un
 
 Please also bear in mind that lock screen behavior should be disabled in the participating mobile devices.
 
-**[scnrunner details here]**
+## Run a dew computing scenario
+
+Once the server is started and mobile devices are attached/registered by the server, the next step is to execute a dew computing scenario. Find an example of a dew computing scenario descriptor at /doc/cs402_scn002.json.
+To proceed with the execution, open a terminal, navigate to the root of scnrunner directory and call the run.sh script with the path to the directory containing the scenario descriptor:
+
+```sh
+cd src/scnrunner
+./run.sh ../doc/
+```
 
 ## Development
 
