@@ -1,0 +1,42 @@
+{ 
+    "scn_id":"cs402_scn002",
+    "app_dir":"dewscn/dogs_finder_app",
+    "results_dir":"../dewscn/dogs_finder_app/results/cs402_scn002/jue_23_jun_2022_10:34:11_-03",
+    "log_file":"../dewscn/dogs_finder_app/results/cs402_scn002/jue_23_jun_2022_10:34:11_-03/cs402_scn002.log",
+    "stream_source": {
+        "type":"SimulatedFromImageFolder",
+        "field":{
+            "img_folder":"dewscn/dogs_finder_app/frameRoot/cycling",
+            "img_extension":"jpg",
+            "per_job_frames":30,
+            "per_burst_jobs":1,
+            "millis_btw_jobs":0,
+            "millis_btw_bursts":1000,
+            "launch_images_server":"True",
+            "image_server_port":8001,
+            "job_builder": {
+                "builder_class":"dogs_finder_app.job.MobileDogsFinderJobBuilder",
+                "builder_params":{
+                    "json_template":"dewscn/dogs_finder_app/templates/benchmarkConfig-template.json"
+                }
+            }
+
+        }
+    },
+    "processor": {
+        "hardware_support":"hardsupp.mobile_cluster.LabMobileCluster",
+        "processor_impl":{
+            "emanager_server_url":"http://localhost:1080/",
+            "emanager_output_path": "../emanager_server/profiles",
+            "devs_batt_init":{
+                        "motorola_moto_g6":0.75,
+                        "samsung_SM_A305G":0.5
+            },
+            "logic":{
+                "processor_class":"job.job_scheduling.RoundRobin",
+				"processor_params": {
+                }
+            }
+        }
+    }
+}

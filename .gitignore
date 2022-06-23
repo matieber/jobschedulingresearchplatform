@@ -130,3 +130,6 @@ dmypy.json
 
 #pycharm proyect folder
 src/.idea
+
+#temp and results directories
+src/dewscn/*/results/
