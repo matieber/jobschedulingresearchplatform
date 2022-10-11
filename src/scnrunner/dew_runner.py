@@ -29,7 +29,8 @@ if __name__ == '__main__':
     print("Output log at:" + scn_data["log_file"])
     logger.info(str(scn_data))
     scn_results_dir = scn_data["results_dir"]
-    import scnrunner.job.job_descriptor as jd
+    print("Results dir: "+ scn_results_dir)
+    import job.job_descriptor as jd
     jd.Job.set_results_home(scn_results_dir)
     Processor.set_results_home(scn_results_dir)
     processor = pb.build_processor(scn_data["processor"])

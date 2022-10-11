@@ -30,6 +30,9 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.*;
 
+import edu.benchmarkandroid.Benchmark.jsonConfig.ParamsRunStage;
+import edu.benchmarkandroid.service.TFLiteModelFactory;
+
 /**
  * Wrapper for frozen detection models trained using the Tensorflow Object Detection API:
  * - https://github.com/tensorflow/models/tree/master/research/object_detection
@@ -41,6 +44,9 @@ import java.util.*;
  */
 public class MobileNetDetectionAPIModel implements Classifier {
 
+    private static final int MOBILE_NET_MODEL_INPUT_SIZE = 300;
+    private static final String MOBILENET_MODEL_FILE = "detect.tflite";
+    private static final String MOBILENET_LABELS_FILE = "labelmap.txt";
     // Only return this many results.
     private static final int NUM_DETECTIONS = 10;
     // Float model
@@ -89,6 +95,17 @@ public class MobileNetDetectionAPIModel implements Classifier {
         return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
     }
 
+    public static Classifier create(ParamsRunStage prs, AssetManager assets) throws IOException {
+        boolean useGpu = prs.getBooleanValue("usesGPU");
+        boolean useXNNPack = prs.getBooleanValue("usesXNNPack");
+        MobileNetDetectionAPIModel.NUM_THREADS = prs.getIntValue("cpuThreads");
+        String quantizedMethod = prs.getValue("quantizedMethod");
+        //TODO: download the model
+        return MobileNetDetectionAPIModel.create(assets, MOBILENET_MODEL_FILE,
+                MOBILENET_LABELS_FILE, MOBILE_NET_MODEL_INPUT_SIZE, quantizedMethod,
+                useGpu, MobileNetDetectionAPIModel.NUM_THREADS, useXNNPack);
+    }
+
     /**
      * Initializes a native TensorFlow session for classifying images.
      *
@@ -96,15 +113,17 @@ public class MobileNetDetectionAPIModel implements Classifier {
      * @param modelFilename The filepath of the model GraphDef protocol buffer.
      * @param labelFilename The filepath of label file for classes.
      * @param inputSize     The size of image input
-     * @param isQuantized   Boolean representing model is quantized or not
+     * @param quantizedMethod   String representing the model quantized method
      */
     public static Classifier create(
             final AssetManager assetManager,
             final String modelFilename,
             final String labelFilename,
             final int inputSize,
-            final boolean isQuantized,
-            final boolean useGpu)
+            final String quantizedMethod,
+            final boolean useGpu,
+            final int numThreads,
+            final boolean useXNNPACK)
             throws IOException {
         final MobileNetDetectionAPIModel d = new MobileNetDetectionAPIModel();
 
@@ -126,21 +145,22 @@ public class MobileNetDetectionAPIModel implements Classifier {
                 d.gpuDelegate = new GpuDelegate(compatibilityList.getBestOptionsForThisDevice());
                 options.addDelegate(d.gpuDelegate);
             } else {
-                options.setNumThreads(NUM_THREADS);
-                options.setUseXNNPACK(true);
+                options.setNumThreads(numThreads);
+                options.setUseXNNPACK(useXNNPACK);
             }
             d.tfLite = new Interpreter(loadModelFile(assetManager, modelFilename), options);
         } catch (Exception e) {
             throw new IOException(e);
         }
 
-        d.isModelQuantized = isQuantized;
         // Pre-allocate buffers.
         int numBytesPerChannel;
-        if (isQuantized) {
+        if ( quantizedMethod.compareTo(TFLiteModelFactory.QUANTIZED_INPUT_8) == 0 ) {
             numBytesPerChannel = 1; // Quantized
+            d.isModelQuantized = true;
         } else {
             numBytesPerChannel = 4; // Floating point
+            d.isModelQuantized = false;
         }
         d.imgData = ByteBuffer.allocateDirect(d.inputSize * d.inputSize * 3 * numBytesPerChannel);
         d.imgData.order(ByteOrder.nativeOrder());

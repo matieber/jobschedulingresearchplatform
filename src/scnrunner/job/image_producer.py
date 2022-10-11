@@ -6,13 +6,6 @@ from PIL import Image
 import glob
 
 
-# from imageio import imread
-# from imageio import imwrite
-# import numpy as np
-# from cow_bcs.preprocess import pre_process
-# from cow_bcs.preprocess import process_depth_image
-
-
 class ImageProducer:
 
     @staticmethod

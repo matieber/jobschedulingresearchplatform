@@ -1,0 +1,25 @@
+{
+"benchmarkDefinitions" : [
+	{
+		"benchmarkId" : "@@bench_id@@",
+		"benchmarkClass" : "@@bench_class@@",
+		"variants" : [
+			{ 
+			  "variantId" : "@@job_id@@",
+			  "paramsSamplingStage" : { "names": [], "values": []}, 
+			  "paramsRunStage" : {"screenState": "on", "names": ["imagePreffix","beginFrameIndex","endFrameIndex"], "values": ["@@imagePreffix@@","@@imgId@@","@@imgId@@"]},
+			  "energyPreconditionRunStage" : {"requiredBatteryState" : "discharging", "startBatteryLevel" : -1.0, "endBatteryLevel" : -1.0}
+			}
+		]
+	}
+ 
+  ],
+
+"devices" : [
+	{
+		"deviceModel": "@@model1@@",
+		"variants": [ "@@job_id@@" ]
+	}
+  ]
+
+}

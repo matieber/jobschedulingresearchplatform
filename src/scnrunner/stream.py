@@ -7,8 +7,9 @@ import logging
 from functools import partial
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 
-import scnrunner.job.job_descriptor
-from scnrunner.util.time_converter import to_milliseconds, from_nano_to_milliseconds
+import job.job_descriptor
+from job.image_producer import ImagesFolderReader
+from util.time_converter import to_milliseconds, from_nano_to_milliseconds
 
 
 class StreamSource(object):
@@ -29,15 +30,15 @@ class StreamSource(object):
         self.isClosed = False
         self.stream_init = 0
         self.parentLogger = logging.getLogger("scnrunner")
-        import scnrunner.job.job_descriptor
+        import job.job_descriptor
         # create jobs home where job descriptors are going to be stored
         try:
-            os.mkdir(scnrunner.job.job_descriptor.Job.get_job_desc_home())
+            os.mkdir(job.job_descriptor.Job.get_job_desc_home())
             self.parentLogger.info("Job's descriptors directory created at: " +
-                                   scnrunner.job.job_descriptor.Job.get_job_desc_home())
+                                   job.job_descriptor.Job.get_job_desc_home())
         except Exception as e:
             self.parentLogger.error("Error creating Jobs descriptor directory at: " +
-                                    scnrunner.job.job_descriptor.Job.get_job_desc_home())
+                                    job.job_descriptor.Job.get_job_desc_home())
 
         data_fields = dict(data_fields)
         for key, val in data_fields.items():
@@ -50,7 +51,7 @@ class StreamSource(object):
            stage and elapsed_time which are the first and second arguments of the method'''
 
     def save_stream_detail(self, stream_record, end_character=''):
-        with open(scnrunner.job.job_descriptor.Job.RESULTS_HOME + StreamSource.STREAM_FILE, 'a+') as f:
+        with open(job.job_descriptor.Job.RESULTS_HOME + StreamSource.STREAM_FILE, 'a+') as f:
             f.write(stream_record + end_character)
 
     def create_job_builder(self, value):
@@ -129,15 +130,15 @@ class SimulatedFromImageFolder(StreamSource):
         self.test_id = test_id
         self.first_image_index = 1
         self.curr_jobs_in_burst = 0
-        from scnrunner.job.image_producer import ImagesFolderReader
         self.img_producer = ImagesFolderReader(self.img_folder, self.img_extension)
         self.total_images = self.img_producer.images_count
+
 
     def initialize(self):
         # the following line is intentionally placed before super().initialize() call
         self.plain_job_builder["builder_params"]["img_producer"] = self.img_producer
         self.plain_job_builder["builder_params"]["test_id"] = self.test_id
-        self.plain_job_builder["builder_params"]["jobs_dir"] = scnrunner.job.job_descriptor.Job.get_job_desc_home()
+        self.plain_job_builder["builder_params"]["jobs_dir"] = job.job_descriptor.Job.get_job_desc_home()
         super().initialize()
         if self.launch_images_server:
             self.init_images_server_in_background()

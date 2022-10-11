@@ -5,6 +5,7 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.RectF;
+import android.os.Environment;
 import android.os.Trace;
 import android.util.Log;
 import org.tensorflow.lite.Interpreter;
@@ -12,7 +13,11 @@ import org.tensorflow.lite.gpu.CompatibilityList;
 import org.tensorflow.lite.gpu.GpuDelegate;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileDescriptor;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.ByteBuffer;
@@ -21,11 +26,17 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.*;
 
+import edu.benchmarkandroid.Benchmark.jsonConfig.ParamsRunStage;
+import edu.benchmarkandroid.service.TFLiteModelFactory;
+
 public class YoloV4DetectionAPIModel implements Classifier {
     public static final String TAG = YoloV4DetectionAPIModel.class.getSimpleName();
     private static final float IMAGE_MEAN = 0.0f;
     private static final float IMAGE_STD = 255.0f;
     private static int NUM_THREADS = 4;
+    //private static final String YOLO_V4_MODEL_FILE = "yolov4-tiny-416.tflite";
+    private static final String YOLO_V4_LABELS_FILE = "cocomap.txt";
+    private static final int YOLO_V4_MODEL_INPUT_SIZE = 416;
     private static final int[] OUTPUT_WIDTH = new int[]{2535, 2535};
     private boolean isModelQuantized;
     private int BATCH_SIZE;
@@ -60,12 +71,43 @@ public class YoloV4DetectionAPIModel implements Classifier {
         return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
     }
 
+    static MappedByteBuffer loadModelFile(String URL, String modelFilename)
+            throws IOException {
+        Log.d(TAG, "model path: "+ URL+"/"+modelFilename);
+        FileInputStream modelPack = new FileInputStream(URL+"/"+modelFilename);
+        FileChannel fileChannel = modelPack.getChannel();
+        long startOffset = modelPack.getChannel().position();
+        long declaredLength = modelPack.getChannel().size();
+        Log.d(TAG, "model name: "+ modelFilename +" model size: "+ declaredLength);
+        return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
+    }
+
+    public static Classifier create(ParamsRunStage prs, Context appContext) throws IOException {
+        String tfModel = prs.getValue("tf_model");
+        boolean useGpu = prs.getBooleanValue("usesGPU");
+        boolean useXNNPack = prs.getBooleanValue("usesXNNPack");
+        YoloV4DetectionAPIModel.NUM_THREADS = prs.getIntValue("cpuThreads");
+        String quantizedMethod = prs.getValue("quantizedMethod");
+
+        return YoloV4DetectionAPIModel.create(
+                appContext,
+                tfModel,
+                YOLO_V4_LABELS_FILE,
+                YOLO_V4_MODEL_INPUT_SIZE,
+                quantizedMethod,
+                0.5f,
+                useGpu,
+                useXNNPack,
+                YoloV4DetectionAPIModel.NUM_THREADS);
+
+    }
+
     /**
      * Initializes a native TensorFlow session for classifying images.
      *  @param modelFilename The model file path relative to the assets folder
      * @param labelFilename The label file path relative to the assets folder
      * @param inputSize The size of image input
-     * @param isQuantized Boolean representing model is quantized or not
+     * @param quantizedMethod String representing the model quantized method
      * @param useGPU
      * @param useXNNPACK Enable an optimized set of floating point CPU kernels (provided by XNNPACK)
      * @param cpuThreads used to parallelize the inference     *
@@ -75,7 +117,7 @@ public class YoloV4DetectionAPIModel implements Classifier {
             final String modelFilename,
             final String labelFilename,
             final int inputSize,
-            final boolean isQuantized,
+                final String quantizedMethod,
             final float minimumConfidence,
             boolean useGPU,
             final boolean useXNNPACK,
@@ -84,16 +126,10 @@ public class YoloV4DetectionAPIModel implements Classifier {
         YoloV4DetectionAPIModel.setCPUThreads(cpuThreads);
         final YoloV4DetectionAPIModel d = new YoloV4DetectionAPIModel();
 
-        MappedByteBuffer modelFile = loadModelFile(context.getAssets(), modelFilename);
-        try (BufferedReader br =
-                     new BufferedReader(new InputStreamReader(context.getAssets().open(labelFilename)))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                Log.w(TAG, line);
-                d.labels.add(line);
-            }
-        }
+        Log.d(TAG, "Models directory: " +  Environment.getExternalStoragePublicDirectory(TFLiteModelFactory.MODELS_HOME).getPath());
+        MappedByteBuffer modelFile = loadModelFile(Environment.getExternalStoragePublicDirectory(TFLiteModelFactory.MODELS_HOME).getPath(), modelFilename);
 
+        loadLabels(d,Environment.getExternalStoragePublicDirectory(TFLiteModelFactory.MODELS_HOME).getPath(), YOLO_V4_LABELS_FILE);
         d.inputSize = inputSize;
 
         try {
@@ -105,7 +141,7 @@ public class YoloV4DetectionAPIModel implements Classifier {
 
                 options.addDelegate(gpuDelegate);
             } else {
-                options.setNumThreads(NUM_THREADS);
+                options.setNumThreads(cpuThreads);
                 options.setUseXNNPACK(useXNNPACK);
             }
             d.tfLite = new Interpreter(modelFile, options);
@@ -117,20 +153,37 @@ public class YoloV4DetectionAPIModel implements Classifier {
         }
         // Pre-allocate buffers.
         int numBytesPerChannel;
-        if (isQuantized) {
+        if ( quantizedMethod.compareTo(TFLiteModelFactory.QUANTIZED_INPUT_8) == 0 ) {
             numBytesPerChannel = 1; // Quantized
+            d.isModelQuantized = true;
         } else {
             numBytesPerChannel = 4; // Floating point
+            d.isModelQuantized = false;
         }
 
         d.imgData = ByteBuffer.allocateDirect(d.BATCH_SIZE * d.inputSize * d.inputSize * 3 * numBytesPerChannel);
         d.imgData.order(ByteOrder.nativeOrder());
         d.intValues = new int[d.inputSize * d.inputSize];
-        d.isModelQuantized = isQuantized;
         d.minimumConfidence = minimumConfidence;
         d.outputLocations = new float[1][OUTPUT_WIDTH[0]][4];
         d.outputClasses = new float[1][OUTPUT_WIDTH[1]][d.labels.size()];
         return d;
+    }
+
+
+    private static void loadLabels(YoloV4DetectionAPIModel d, String path, String yoloV4LabelsFile) {
+        try (BufferedReader br =
+                     new BufferedReader(new FileReader(path + "/" + yoloV4LabelsFile))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                Log.w(TAG, line);
+                d.labels.add(line);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

@@ -7,13 +7,12 @@ import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 import edu.benchmarkandroid.Benchmark.Benchmark;
 import edu.benchmarkandroid.Benchmark.StopCondition;
-import edu.benchmarkandroid.Benchmark.jsonConfig.ParamsRunStage;
 import edu.benchmarkandroid.Benchmark.jsonConfig.Variant;
 import edu.benchmarkandroid.service.BatteryNotificator;
 import edu.benchmarkandroid.service.ProgressUpdater;
+import edu.benchmarkandroid.service.TFLiteModelFactory;
 import edu.benchmarkandroid.service.WifiNotificator;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
@@ -23,24 +22,10 @@ public class DogsBenchmark extends Benchmark {
 
     private static final String TAG = "DogsBenchmark";
 
-    ParamsRunStage prs = getVariant().getParamsRunStage();
-    private final String imagePrefix = prs.getValue("imagePreffix");
-    private final int beginFrameIndex = prs.getIntValue("beginFrameIndex");
-    private final int endFrameIndex = prs.getIntValue("endFrameIndex");
-    private final boolean useGpu = prs.getBooleanValue("useGpu");
-    private final boolean useXNNPack = prs.getBooleanValue("useXNNPack");
-    private final String model = prs.getValue("model");
-
+    private final String imagePrefix = getVariant().getParamsRunStage().getValue("imagePreffix");
+    private final int beginFrameIndex = getVariant().getParamsRunStage().getIntValue("beginFrameIndex");
+    private final int endFrameIndex = getVariant().getParamsRunStage().getIntValue("endFrameIndex");
     private ProgressUpdater progressUpdater = null;
-
-    private static final int MOBILE_NET_MODEL_INPUT_SIZE = 300;
-    private static final int YOLO_V4_MODEL_INPUT_SIZE = 416;
-    private static final boolean IS_MODEL_QUANTIZED = true;
-    private static final String MOBILENET_MODEL_FILE = "detect.tflite";
-    private static final String MOBILENET_LABELS_FILE = "labelmap.txt";
-    private static final String YOLO_V4_MODEL_FILE = "yolov4-tiny-416.tflite";
-    private static final String YOLO_V4_LABELS_FILE = "cocomap.txt";
-
 
     private final BatteryNotificator batteryNotificator;
     private final WifiNotificator wifiInfoNotificator;
@@ -51,40 +36,14 @@ public class DogsBenchmark extends Benchmark {
         super(variant);
         batteryNotificator = BatteryNotificator.getInstance();
         wifiInfoNotificator = WifiNotificator.getInstance();
+        this.detector = TFLiteModelFactory.getInstance(getContext()).createClassifier(getVariant().getParamsRunStage(),getContext());
     }
 
     @SuppressLint("DefaultLocale")
     @Override
     public void runBenchmark(StopCondition stopCondition, final ProgressUpdater progressUpdater) {
-        Log.d(TAG, String.format("Model: %s, use GPU: %s, use XNNPack: %s", model, useGpu, useXNNPack));
+        //Log.d(TAG, String.format("Model: %s, use GPU: %s, use XNNPack: %s", model, useGpu, useXNNPack));
         long jobInitTime = System.currentTimeMillis();
-        try {
-            if (model.equals("yolov4-lite") || model.equals("yolov4")) {
-                int CPUThreads = prs.getIntValue("cpuThreads");
-                this.detector = YoloV4DetectionAPIModel.create(
-                        getContext(),
-                        YOLO_V4_MODEL_FILE,
-                        YOLO_V4_LABELS_FILE,
-                        YOLO_V4_MODEL_INPUT_SIZE,
-                        false,
-                        0.5f,
-                        useGpu,
-                        useXNNPack,
-                        CPUThreads);
-            } else {
-                this.detector =
-                        MobileNetDetectionAPIModel.create(
-                                getAssets(),
-                                MOBILENET_MODEL_FILE,
-                                MOBILENET_LABELS_FILE,
-                                MOBILE_NET_MODEL_INPUT_SIZE,
-                                IS_MODEL_QUANTIZED,
-                                useGpu);
-            }
-        } catch (IOException ex) {
-            throw new RuntimeException(ex);
-        }
-
         this.progressUpdater = progressUpdater;
 
         this.progressUpdater.update("frameno,success,jobInitTime(millis),detectTime(millis),inputNetTime(millis),inputSize(kb),rssi,battLevel[init;end],recognition");

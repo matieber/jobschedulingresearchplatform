@@ -16,8 +16,8 @@
       "ESP8266SwitchManager": {
         "maxSupportedDevices" : 4,
         "params":{
-            "wifi_SSID": "net",
-            "wifi_PASS": "pass"
+            "wifi_SSID": "wifi_SSID",
+            "wifi_PASS": "wifi_PASS"
         }
       }
     },

@@ -6,6 +6,7 @@ import time
 # https://stackoverflow.com/questions/714063/importing-modules-from-parent-folder
 from pathlib import Path
 sys.path.append(str(Path('.').absolute().parent))
+from scnrunner.job.image_producer import ImagesFolderReader
 
 
 class Job:
@@ -66,7 +67,7 @@ class Job:
 
     @classmethod
     def get_job_desc_home(cls):
-        return Job.RESULTS_HOME +"/jobs/"
+        return Job.RESULTS_HOME + "/jobs/"
 
     @classmethod
     def set_results_home(cls, jobs_parent):
@@ -74,6 +75,10 @@ class Job:
 
     def __str__(self):
         return "job_id:" + str(self.job_id) + ", json_template:" + str(self.json_template)
+
+
+'''A specialization of Job which uses images as input. Images are located in a folder of the filesystem. Their name share
+a suffix and a prefix. Since images are numerated consecutively, an ImageInputJob instance has "from" and "to" indexes'''
 
 
 class ImageInputJob(Job):
@@ -121,21 +126,21 @@ class ImageInputJob(Job):
 
 class ImageInputJobBuilder:
 
-    def __init__(self, iprod):
-        self.image_producer = iprod
-        from scnrunner.job.image_producer import ImagesFolderReader
-        self.input_prefix = ImagesFolderReader.get_android_image_preffix(self.image_producer.destFolder)
-        self.frame_container_folder = ImagesFolderReader.get_dest_folder()
+    def __init__(self, params):
+        self.image_producer = params["img_producer"]
+        self.input_prefix = self.image_producer.get_android_image_preffix(self.image_producer.destFolder)
+        self.frame_container_folder = self.image_producer.get_dest_folder()
+        self.input_suffix = self.image_producer.get_android_image_suffix()
 
     def get_job_input_path(self, frameindex):
-        from scnrunner.job.image_producer import ImagesFolderReader
-        baseFolder = ImagesFolderReader.get_dest_folder()
-        return baseFolder + '/' + self.input_prefix + '.' + str(frameindex) + self.input_suffix
+        #from image_producer import ImagesFolderReader
+        #baseFolder = ImagesFolderReader.get_dest_folder()
+        return self.frame_container_folder + '/' + self.input_prefix + '.' + str(frameindex) + self.input_suffix
 
     def get_job_input_bytes(self, init_img_index, last_index):
         size = 0
         # print(last_index)
-        for img_index in range(init_img_index, last_index+1, 1):
+        for img_index in range(init_img_index, last_index + 1, 1):
             job_path = self.get_job_input_path(img_index)
             while not os.path.exists(job_path):
                 time.sleep(1)
@@ -145,4 +150,73 @@ class ImageInputJobBuilder:
         return size
 
     def createJob(self, init_img_index: int, last_img_index: int):
+        pass
+
+
+class ImageBasedTensorFlowJobBuilder(ImageInputJobBuilder):
+
+    def __init__(self, params):
+        super().__init__(params)
+        self.job_template_filepath = "../" + params["json_template"]
+        self.jobs_name_prefix = params["test_id"]
+        self.job_template = ""
+        self.jobs_dir = params["jobs_dir"]
+        self.tf_jobs_params = dict(params["tf_params"])
+
+    def get_job_template_size(self, unit="B"):
+        ret = int(os.path.getsize(self.job_template_filepath))
+        if str(unit).upper() == "KB":
+            return float(ret / 1024)
+        else:
+            if str(unit).upper() == "MB":
+                return float(ret / (1024 * 1024))
+            else:
+                return float(ret)
+
+    def createJob(self, init_img_index: int, last_img_index: int):
+        with open(self.job_template_filepath, "r") as content:
+            self.job_template = json.load(content)
+
+        job_name = self.input_prefix + "_" + str(init_img_index) + "_to_" + str(last_img_index)
+        variant_id = job_name
+        job_instance = ImageInputJob()
+        job_instance.set_init_img_index(init_img_index)
+        job_instance.set_last_img_index(last_img_index)
+        job_instance.set_image_container_folder(self.frame_container_folder)
+        job_instance.set_images_suffix(self.input_suffix)
+        job_instance.set_images_prefix(self.input_prefix)
+        job_instance.job_id = job_name
+
+        # input size includes images and job descriptor file sizes.
+        job_instance.input_size = self.get_job_input_bytes(init_img_index, last_img_index) + int(
+            self.get_job_template_size("B"))
+        job_filename = self.jobs_name_prefix + "_" + job_name + ".json"
+
+        self.job_template["benchmarkDefinitions"][0]["benchmarkId"] = job_filename
+        job_instance.descriptor_uri = str(os.path.join(self.jobs_dir, job_filename))
+        self.job_template["benchmarkDefinitions"][0]["benchmarkClass"] = self.get_mobile_job_classname()
+        self.job_template["benchmarkDefinitions"][0]["variants"][0]["variantId"] = variant_id
+        self.job_template["benchmarkDefinitions"][0]["variants"][0]["paramsRunStage"]["values"] = \
+            [self.input_prefix, str(init_img_index), str(last_img_index)]
+
+        param_names, param_values = self.overrideTFJobParams(
+            self.job_template["benchmarkDefinitions"][0]["variants"][0]["paramsRunStage"]["names"],
+            self.job_template["benchmarkDefinitions"][0]["variants"][0]["paramsRunStage"]["values"])
+
+        self.job_template["benchmarkDefinitions"][0]["variants"][0]["paramsRunStage"]["names"] = param_names
+        self.job_template["benchmarkDefinitions"][0]["variants"][0]["paramsRunStage"]["values"] = param_values
+        self.job_template["devices"][0]["variants"] = [variant_id]
+
+        job_instance.json_template = self.job_template
+
+        return job_instance
+
+    def overrideTFJobParams(self, param_names, param_values):
+        for param in list(self.tf_jobs_params.keys()):
+            if param not in param_names:
+                param_names.append(str(param))
+                param_values.append(str(self.tf_jobs_params[param]))
+        return param_names, param_values
+
+    def get_mobile_job_classname(self):
         pass
