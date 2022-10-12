@@ -1,0 +1,49 @@
+{ 
+    "scn_id":"scn004_non_quantized_1thread_RoundRobin",
+    "app_dir":"dewscn/dogs_finder_app",
+    "results_dir":"../dewscn/dogs_finder_app/results/scn004_non_quantized_1thread_RoundRobin/mar_11_oct_2022_16:19:53_-03",
+    "log_file":"../dewscn/dogs_finder_app/results/scn004_non_quantized_1thread_RoundRobin/mar_11_oct_2022_16:19:53_-03/cs402_scn004.log",
+    "stream_source": {
+        "type":"SimulatedFromImageFolder",
+        "field":{
+            "img_folder":"dewscn/dogs_finder_app/frameRoot/cycling",
+            "img_extension":"jpg",
+            "per_job_frames":30,
+            "per_burst_jobs":1,
+            "millis_btw_jobs":0,
+            "millis_btw_bursts":1000,
+            "launch_images_server":"True",
+            "image_server_port":8001,
+            "job_builder": {
+                "builder_class":"dewscn.dogs_finder_app.job.DogsFinderJobBuilder",
+                "builder_params":{
+                    "json_template":"scnrunner/templates/job-template.json",
+                    "tf_params": {
+                            "tf_model":"yolov4-tiny-416.tflite",
+                            "quantizedMethod": "non_quantized",
+                            "usesGPU": "False",
+                            "usesXNNPack": "False",
+                            "cpuThreads": 1
+                        }
+                }
+            }
+
+        }
+    },
+    "processor": {
+        "hardware_support":"hardsupp.mobile_cluster.LabMobileCluster",
+        "processor_impl":{
+            "emanager_server_url":"http://localhost:1080/",
+            "emanager_output_path": "../emanager_server/profiles",
+            "devs_batt_init":{
+                        "Xiaomi_Redmi_Note_7":-1.0,
+                        "samsung_SM_A305G":-1.0
+            },
+            "logic":{
+                "processor_class":"job.job_scheduling.RoundRobin",
+				"processor_params": {
+                }
+            }
+        }
+    }
+}

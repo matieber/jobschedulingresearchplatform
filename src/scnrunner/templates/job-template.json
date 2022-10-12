@@ -7,7 +7,7 @@
 			{ 
 			  "variantId" : "@@job_id@@",
 			  "paramsSamplingStage" : { "names": [], "values": []}, 
-			  "paramsRunStage" : {"screenState": "on", "names": ["imagePreffix","beginFrameIndex","endFrameIndex"], "values": ["@@imagePreffix@@","@@imgId@@","@@imgId@@"]},
+			  "paramsRunStage" : {"screenState": "off", "names": ["imagePreffix","beginFrameIndex","endFrameIndex"], "values": ["@@imagePreffix@@","@@imgId@@","@@imgId@@"]},
 			  "energyPreconditionRunStage" : {"requiredBatteryState" : "discharging", "startBatteryLevel" : -1.0, "endBatteryLevel" : -1.0}
 			}
 		]

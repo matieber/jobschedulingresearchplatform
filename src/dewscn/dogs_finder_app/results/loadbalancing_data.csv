@@ -1,0 +1,9 @@
+Model Version,Load Balancing,Makespan (mm:ss)
+quantized_input32_4threads,RoundRobin,194865
+non_quantized_4threads,RoundRobin,270147
+quantized_input32_1thread,RoundRobin,285089
+non_quantized_1thread,RoundRobin,440661
+quantized_input32_4threads,PullBased,159759
+non_quantized_4threads,PullBased,199925
+quantized_input32_1thread,PullBased,255018
+non_quantized_1thread,PullBased,390542

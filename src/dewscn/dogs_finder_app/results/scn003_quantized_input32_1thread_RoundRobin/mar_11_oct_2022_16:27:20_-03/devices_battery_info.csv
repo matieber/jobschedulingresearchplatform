@@ -1,0 +1,9 @@
+device,stage,battery_level
+Xiaomi_Redmi_Note_7,PREP_START,0.15
+samsung_SM_A305G,PREP_START,0.39
+Xiaomi_Redmi_Note_7,PREP_END,0.15
+samsung_SM_A305G,PREP_END,0.39
+Xiaomi_Redmi_Note_7,PROCESSING_START,0.15
+samsung_SM_A305G,PROCESSING_START,0.39
+Xiaomi_Redmi_Note_7,PROCESSING_END,0.12
+samsung_SM_A305G,PROCESSING_END,0.37

@@ -133,6 +133,6 @@ src/.idea
 .idea
 
 #temp and results directories
-src/dewscn/*/results/
+#src/dewscn/*/results/
 src/dewscn/*/frameRoot/*/*.jpg
 src/emanager_server/app-debug.apk
