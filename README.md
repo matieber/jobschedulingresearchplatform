@@ -1,9 +1,9 @@
 # LiveDewStream
-## The first real stream processing platform for executing deep learning on smartphone clusters at the edge, ever
+## The first platform for running in-lab experiments of distributed inferences at the edge using deep learning and real smartphone clusters testbeds.
 
 Powered by [<img src="https://www.python.org/static/img/python-logo@2x.png" alt="Python" style="width:25%; height: 25%;" />](https://www.python.org) [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Android_logo_2019_%28stacked%29.svg/1200px-Android_logo_2019_%28stacked%29.svg.png" alt="Android" style="height: 7%; width: 7%;" />](https://www.android.com)
 
-Dew Computing, an evolution of Fog Computing, aims at fulfilling computing needs -e.g. deep learning applied to object classification- close to where data is originated and using computing resources that include consumer electronics devices such as smartphones. Simulation tools like DewSim aid the study of resource allocation mechanisms for exploiting clusters of smartphones, however, there is a gap w.r.t software tools that allow to perform similar studies over real Dew computing testbeds. We have developed LiveDewStream, an open source project to model executable tasks derived from data streams to be run on real smartphone clusters. The project offers a key and missing functionality: reproducibility of battery-driven Dew experiments.
+Dew Computing, an evolution of Fog Computing, aims at fulfilling computing needs -e.g. deep learning applied to object classification- close to where data is originated and using computing resources that include consumer electronics devices such as smartphones. Simulation tools like DewSim aid the study of resource allocation mechanisms for exploiting clusters of smartphones, however, there is a gap w.r.t software tools that allow to perform similar studies over real Dew computing testbeds. We have developed LiveDewStream, an open source project to model executable tasks derived from data streams to be run on real smartphone clusters. The project offers a key and missing functionality: observability and reproducibility of battery-driven Dew experiments.
 
 ## Features
 
