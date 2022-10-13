@@ -67,7 +67,7 @@ By default, the Python-based server application will log output to ./log.txt. To
 stdbuf -oL ./launch_emanager_server.sh &> log.txt
 ```
 
-You might need to (re)build the Android app first (Normapp), which is located under src/emanager_server/Normapp. Please open the Android app project folder using [Android Studio](https://developer.android.com/studio).
+You might need to (re)build the Android app first (Normapp), which is located under src/emanager_server/Normapp. Please open the Android app project folder using [Android Studio](https://developer.android.com/studio). As it can be seen from the DogsBenchmark class located at edu.benchmarkandroid.Benchmark.benchmarks.dogsBenchmark, we register and report as job output data that includes model inference times, scores, RSSI, and server-to-smartphone data transfer times. However, any other system metric can be added provided it is allowed by the Android sandboxing scheme. Feel free to introduce code changes to report the most useful metrics according to your research objectives.
 
 Please also bear in mind that lock screen behavior should be disabled in the participating mobile devices.
 
